@@ -1,0 +1,24 @@
+{
+  "name": "giturlparse",
+  "version": "1.0.0",
+  "description": "Parses and stringifies git urls.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:IonicaBizau/node-giturlparse.git"
+  },
+  "keywords": [
+    "parse",
+    "git",
+    "url"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/node-giturlparse/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/node-giturlparse"
+}
