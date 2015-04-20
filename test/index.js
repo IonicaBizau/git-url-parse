@@ -19,6 +19,8 @@ it("should parse ssh urls", function (cb) {
     Assert.strictEqual(res.name, "node-giturlparse");
     Assert.strictEqual(res._, URLS.ssh);
     Assert.strictEqual(res.toString("https"), URLS.https);
+    Assert.strictEqual(res.toString("git+ssh"), URLS.gitSsh);
+    Assert.strictEqual(res.toString("ssh"), URLS.ssh);
     cb();
 });
 
@@ -30,6 +32,8 @@ it("should parse https urls", function (cb) {
     Assert.strictEqual(res.owner, "IonicaBizau");
     Assert.strictEqual(res.name, "node-giturlparse");
     Assert.strictEqual(res._, URLS.https);
+    Assert.strictEqual(res.toString("https"), URLS.https);
+    Assert.strictEqual(res.toString("git+ssh"), URLS.gitSsh);
     Assert.strictEqual(res.toString("ssh"), URLS.ssh);
     cb();
 });
@@ -41,6 +45,8 @@ it("should parse https urls with ending slash", function (cb) {
     Assert.strictEqual(res.source, "github.com");
     Assert.strictEqual(res.owner, "IonicaBizau");
     Assert.strictEqual(res.name, "node-giturlparse");
+    Assert.strictEqual(res.toString("https"), URLS.https);
+    Assert.strictEqual(res.toString("git+ssh"), URLS.gitSsh);
     Assert.strictEqual(res.toString("ssh"), URLS.ssh);
     cb();
 });
@@ -52,7 +58,8 @@ it("should parse git+ssh urls", function (cb) {
     Assert.strictEqual(res.source, "github.com");
     Assert.strictEqual(res.owner, "IonicaBizau");
     Assert.strictEqual(res.name, "node-giturlparse");
-    Assert.strictEqual(res.toString("ssh"), URLS.ssh);
     Assert.strictEqual(res.toString("https"), URLS.https);
+    Assert.strictEqual(res.toString("git+ssh"), URLS.gitSsh);
+    Assert.strictEqual(res.toString("ssh"), URLS.ssh);
     cb();
 });
