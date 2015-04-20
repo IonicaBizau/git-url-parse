@@ -45,7 +45,7 @@ it("should parse https urls with ending slash", function (cb) {
     cb();
 });
 
-// HTTPS with ending slash
+// git+ssh protocol
 it("should parse git+ssh urls", function (cb) {
     var res = GitUrlParse(URLS.gitSsh);
     Assert.strictEqual(res.protocol, "git+ssh");
