@@ -1,21 +1,24 @@
 // Dependencies
 var GitUrlParse = require("../lib");
 
-// Constants
-const urls = {
-    ssh: "git@github.com:IonicaBizau/node-giturlparse.git"
-  , https: "https://github.com/IonicaBizau/node-giturlparse.git"
-  , local: "/opt/git/project.git"
-  , file: "file:///opt/git/project.git"
-};
+console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git"));
+// => { protocol: 'ssh'
+//    , source: 'github.com'
+//    , owner: 'IonicaBizau'
+//    , name: 'node-git-url-parse'
+//    , _: 'git@github.com:IonicaBizau/node-git-url-parse.git'
+//    , toString: [Function] }
 
-// Parse
-console.log(GitUrlParse(urls.ssh));
-console.log(GitUrlParse(urls.https));
-console.log(GitUrlParse(urls.local));
-console.log(GitUrlParse(urls.file));
+console.log(GitUrlParse("https://github.com/IonicaBizau/node-git-url-parse.git"));
+// => { protocol: 'https'
+//    , source: 'github.com'
+//    , owner: 'IonicaBizau'
+//    , name: 'node-git-url-parse'
+//    , _: 'https://github.com/IonicaBizau/node-git-url-parse.git'
+//    , toString: [Function] }
 
-// Stringify
-console.log(GitUrlParse(urls.ssh).toString("http"));
-console.log(GitUrlParse(urls.ssh).toString("https"));
-console.log(GitUrlParse(urls.https).toString("ssh"));
+console.log(GitUrlParse("https://github.com/IonicaBizau/node-git-url-parse.git").toString("ssh"));
+// => 'git@github.com:IonicaBizau/node-git-url-parse.git.git'
+
+console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git").toString("https"));
+// => 'https://github.com/IonicaBizau/node-git-url-parse.git'

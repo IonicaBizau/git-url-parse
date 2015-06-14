@@ -21,6 +21,9 @@
     "url": "https://github.com/IonicaBizau/node-git-url-parse/issues"
   },
   "homepage": "https://github.com/IonicaBizau/node-git-url-parse",
+  "blah": {
+      "h_img": "http://i.imgur.com/HlfMsVf.png"
+  },
   "devDependencies": {
     "mocha": "*"
   }
