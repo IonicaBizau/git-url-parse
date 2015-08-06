@@ -1,7 +1,7 @@
 {
   "name": "git-url-parse",
   "version": "3.0.0",
-  "description": "Parses and stringifies git urls.",
+  "description": "A high level git url parser for common git providers.",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha"
@@ -23,8 +23,5 @@
   "homepage": "https://github.com/IonicaBizau/node-git-url-parse",
   "blah": {
       "h_img": "http://i.imgur.com/HlfMsVf.png"
-  },
-  "devDependencies": {
-    "mocha": "*"
   }
 }
