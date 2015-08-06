@@ -17,7 +17,7 @@
 
 # git-url-parse [![Donate now][donate-now]][paypal-donations]
 
-Parses and stringifies git urls.
+A high level git url parser for common git providers.
 
 ## Installation
 
@@ -32,26 +32,46 @@ $ npm i git-url-parse
 var GitUrlParse = require("git-url-parse");
 
 console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git"));
-// => { protocol: 'ssh'
-//    , source: 'github.com'
-//    , owner: 'IonicaBizau'
-//    , name: 'node-git-url-parse'
-//    , _: 'git@github.com:IonicaBizau/node-git-url-parse.git'
-//    , toString: [Function] }
+// => {
+//     protocols: []
+//   , port: null
+//   , resource: "github.com"
+//   , user: "git"
+//   , pathname: "/IonicaBizau/node-git-url-parse.git"
+//   , hash: ""
+//   , search: ""
+//   , href: "git@github.com:IonicaBizau/node-git-url-parse.git"
+//   , token: ""
+//   , protocol: "ssh"
+//   , toString: [Function]
+//   , source: "github.com"
+//   , name: "node-git-url-parse"
+//   , owner: "IonicaBizau"
+// } {
 
 console.log(GitUrlParse("https://github.com/IonicaBizau/node-git-url-parse.git"));
-// => { protocol: 'https'
-//    , source: 'github.com'
-//    , owner: 'IonicaBizau'
-//    , name: 'node-git-url-parse'
-//    , _: 'https://github.com/IonicaBizau/node-git-url-parse.git'
-//    , toString: [Function] }
+// => {
+//     protocols: ["https"]
+//   , port: null
+//   , resource: "github.com"
+//   , user: ""
+//   , pathname: "/IonicaBizau/node-git-url-parse.git"
+//   , hash: ""
+//   , search: ""
+//   , href: "https://github.com/IonicaBizau/node-git-url-parse.git"
+//   , token: ""
+//   , protocol: "https"
+//   , toString: [Function]
+//   , source: "github.com"
+//   , name: "node-git-url-parse"
+//   , owner: "IonicaBizau"
+// }
 
 console.log(GitUrlParse("https://github.com/IonicaBizau/node-git-url-parse.git").toString("ssh"));
-// => 'git@github.com:IonicaBizau/node-git-url-parse.git.git'
+// => "git@github.com:IonicaBizau/node-git-url-parse.git"
 
 console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git").toString("https"));
-// => 'https://github.com/IonicaBizau/node-git-url-parse.git'
+// => "https://github.com/IonicaBizau/node-git-url-parse.git"
 
 ```
 
@@ -65,12 +85,21 @@ Parses a Git url.
 
 #### Return
 - **GitUrl** The `GitUrl` object containing:
- - `protocol` (String): The url protocol.
+ - `protocols` (Array): An array with the url protocols (usually it has one element).
+ - `port` (null|Number): The domain port.
+ - `resource` (String): The url domain (including subdomains).
+ - `user` (String): The authentication user (usually for ssh urls).
+ - `pathname` (String): The url pathname.
+ - `hash` (String): The url hash.
+ - `search` (String): The url querystring value.
+ - `href` (String): The input url.
+ - `protocol` (String): The git url protocol.
+ - `token` (String): The oauth token (could appear in the https urls).
  - `source` (String): The Git provider (e.g. `"github.com"`).
  - `owner` (String): The repository owner.
  - `name` (String): The repository name.
- - `_` (String): The original url which was parsed.
  - `toString` (Function): A function to stringify the parsed url into another url type.
+ - `organization` (String): The organization the owner belongs to. This is CloudForge specific.
 
 ### `stringify(obj, type)`
 Stringifies a `GitUrl` object.
