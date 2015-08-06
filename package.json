@@ -22,6 +22,16 @@
   },
   "homepage": "https://github.com/IonicaBizau/node-git-url-parse",
   "blah": {
-      "h_img": "http://i.imgur.com/HlfMsVf.png"
+    "h_img": "http://i.imgur.com/HlfMsVf.png"
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "dependencies": {
+    "git-up": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
   }
 }
