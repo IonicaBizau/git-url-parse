@@ -96,6 +96,7 @@ it("should parse CloudForge urls", function (cb) {
     var res = GitUrlParse("https://owner@organization.git.cloudforge.com/name.git");
     Assert.strictEqual(res.source, "cloudforge.com");
     Assert.strictEqual(res.owner, "owner");
+    Assert.strictEqual(res.organization, "organization");
     Assert.strictEqual(res.name, "name");
     cb();
 });
