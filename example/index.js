@@ -17,7 +17,7 @@ console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git"));
 //   , source: "github.com"
 //   , name: "node-git-url-parse"
 //   , owner: "IonicaBizau"
-// } {
+// }
 
 console.log(GitUrlParse("https://github.com/IonicaBizau/node-git-url-parse.git"));
 // => {
