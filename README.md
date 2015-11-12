@@ -101,6 +101,8 @@ Have an idea? Found a bug? See [how to contribute][contributing].
 ## Where is this library used?
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
+ - [`git-issues`](https://github.com/softwarescales/git-issues) by Gabriel Petrovay
+
  - [`gpm`](https://github.com/IonicaBizau/node-gpm)
 
  - [`gtni`](https://github.com/nmrony/gtni#readme) by Nur Mohammed Rony
