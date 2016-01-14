@@ -1,8 +1,8 @@
 [![git-url-parse](http://i.imgur.com/HlfMsVf.png)](#)
 
-# git-url-parse [![Support this project][donate-now]][paypal-donations]
+# git-url-parse [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Travis](https://img.shields.io/travis/IonicaBizau/node-git-url-parse)](https://travis-ci.org/IonicaBizau/node-git-url-parse/) [![Version](https://img.shields.io/npm/v/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse) [![Downloads](https://img.shields.io/npm/dt/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
-A high level git url parser for common git providers.
+> A high level git url parser for common git providers.
 
 ## Installation
 
@@ -107,7 +107,7 @@ If you are using this library in one of your projects, add it in this list. :spa
 
  - [`gtni`](https://nmrony.github.io/gtni) by Nur Mohammed Rony
 
- - [`ogh`](https://npmjs.com/package/ogh) by EGOIST
+ - [`ogh`](https://github.com/egoist/ogh#readme) by EGOIST
 
  - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)
 
