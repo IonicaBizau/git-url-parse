@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:IonicaBizau/node-git-url-parse.git"
+    "url": "git@github.com:IonicaBizau/git-url-parse.git"
   },
   "keywords": [
     "parse",
@@ -18,9 +18,9 @@
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IonicaBizau/node-git-url-parse/issues"
+    "url": "https://github.com/IonicaBizau/git-url-parse/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/node-git-url-parse",
+  "homepage": "https://github.com/IonicaBizau/git-url-parse",
   "blah": {
     "h_img": "http://i.imgur.com/HlfMsVf.png"
   },
