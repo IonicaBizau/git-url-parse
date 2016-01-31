@@ -14,7 +14,7 @@ $ npm i --save git-url-parse
 
 ```js
 // Dependencies
-var GitUrlParse = require("git-url-parse");
+const GitUrlParse = require("git-url-parse");
 
 console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git"));
 // => {
@@ -61,7 +61,7 @@ console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git").toS
 
 ## Documentation
 
-### `GitUrlParse(url)`
+### `gitUrlParse(url)`
 Parses a Git url.
 
 #### Params
@@ -103,9 +103,13 @@ If you are using this library in one of your projects, add it in this list. :spa
 
  - [`git-issues`](https://github.com/softwarescales/git-issues) by Gabriel Petrovay
 
+ - [`github-publish-npm`](https://github.com/ofersadgat/github-publish-npm) by Ofer Sadgat
+
  - [`gpm`](https://github.com/IonicaBizau/gpm)
 
  - [`gtni`](https://nmrony.github.io/gtni) by Nur Mohammed Rony
+
+ - [`nodeschool-admin`](https://github.com/nodeschool/admin#readme) by Martin Heidegger
 
  - [`ogh`](https://github.com/egoist/ogh#readme) by EGOIST
 
