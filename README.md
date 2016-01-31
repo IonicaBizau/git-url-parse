@@ -1,6 +1,6 @@
 [![git-url-parse](http://i.imgur.com/HlfMsVf.png)](#)
 
-# git-url-parse [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Travis](https://img.shields.io/travis/IonicaBizau/node-git-url-parse.svg)](https://travis-ci.org/IonicaBizau/node-git-url-parse/) [![Version](https://img.shields.io/npm/v/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse) [![Downloads](https://img.shields.io/npm/dt/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
+# git-url-parse [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Travis](https://img.shields.io/travis/IonicaBizau/git-url-parse.svg)](https://travis-ci.org/IonicaBizau/git-url-parse/) [![Version](https://img.shields.io/npm/v/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse) [![Downloads](https://img.shields.io/npm/dt/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > A high level git url parser for common git providers.
 
@@ -82,6 +82,7 @@ Parses a Git url.
  - `source` (String): The Git provider (e.g. `"github.com"`).
  - `owner` (String): The repository owner.
  - `name` (String): The repository name.
+ - `full_name` (String): The owner and name values in the `owner/name` format.
  - `toString` (Function): A function to stringify the parsed url into another url type.
  - `organization` (String): The organization the owner belongs to. This is CloudForge specific.
 
