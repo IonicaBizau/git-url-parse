@@ -59,6 +59,6 @@ Contributions are more than welcome!
 
 Thanks! :sweat_smile:
 
-[1]: https://github.com/IonicaBizau/node-git-url-parse/issues
+[1]: https://github.com/IonicaBizau/git-url-parse/issues
 
 [2]: https://github.com/IonicaBizau/code-style
