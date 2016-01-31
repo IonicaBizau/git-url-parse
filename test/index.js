@@ -1,7 +1,7 @@
 // Dependencies
-var GitUrlParse = require("../lib")
-  , Assert = require("assert")
-  ;
+const gitUrlParse = require("..")
+    , tester = require("tester")
+    ;
 
 // Constants
 const URLS = {
@@ -10,93 +10,88 @@ const URLS = {
   , gitSsh: "git+ssh://git@github.com/IonicaBizau/node-giturlparse.git"
 };
 
-// SSH urls
-it("should parse ssh urls", function (cb) {
-    var res = GitUrlParse(URLS.ssh);
-    Assert.strictEqual(res.protocol, "ssh");
-    Assert.strictEqual(res.source, "github.com");
-    Assert.strictEqual(res.owner, "IonicaBizau");
-    Assert.strictEqual(res.name, "node-giturlparse");
-    Assert.strictEqual(res.href, URLS.ssh);
-    Assert.strictEqual(res.toString("https"), URLS.https);
-    Assert.strictEqual(res.toString("git+ssh"), URLS.gitSsh);
-    Assert.strictEqual(res.toString("ssh"), URLS.ssh);
-    cb();
-});
+tester.describe("parse urls", test => {
 
-// HTTPS urls
-it("should parse https urls", function (cb) {
-    var res = GitUrlParse(URLS.https);
-    Assert.strictEqual(res.protocol, "https");
-    Assert.strictEqual(res.source, "github.com");
-    Assert.strictEqual(res.owner, "IonicaBizau");
-    Assert.strictEqual(res.name, "node-giturlparse");
-    Assert.strictEqual(res.href, URLS.https);
-    Assert.strictEqual(res.toString("https"), URLS.https);
-    Assert.strictEqual(res.toString("git+ssh"), URLS.gitSsh);
-    Assert.strictEqual(res.toString("ssh"), URLS.ssh);
-    cb();
-});
+    // SSH urls
+    test.it("should parse ssh urls", () => {
+        var res = gitUrlParse(URLS.ssh);
+        test.expect(res.protocol).toBe("ssh");
+        test.expect(res.source).toBe("github.com");
+        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.name).toBe("node-giturlparse");
+        test.expect(res.href).toBe(URLS.ssh);
+        test.expect(res.toString("https")).toBe(URLS.https);
+        test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh);
+        test.expect(res.toString("ssh")).toBe(URLS.ssh);
+    });
 
-// HTTPS with ending slash
-it("should parse https urls with ending slash", function (cb) {
-    var res = GitUrlParse("https://github.com/IonicaBizau/node-giturlparse/");
-    Assert.strictEqual(res.protocol, "https");
-    Assert.strictEqual(res.source, "github.com");
-    Assert.strictEqual(res.owner, "IonicaBizau");
-    Assert.strictEqual(res.name, "node-giturlparse");
-    Assert.strictEqual(res.toString("https"), URLS.https);
-    Assert.strictEqual(res.toString("git+ssh"), URLS.gitSsh);
-    Assert.strictEqual(res.toString("ssh"), URLS.ssh);
-    cb();
-});
+    // HTTPS urls
+    test.it("should parse https urls", () => {
+        var res = gitUrlParse(URLS.https);
+        test.expect(res.protocol).toBe("https");
+        test.expect(res.source).toBe("github.com");
+        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.name).toBe("node-giturlparse");
+        test.expect(res.href).toBe(URLS.https);
+        test.expect(res.toString("https")).toBe(URLS.https);
+        test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh);
+        test.expect(res.toString("ssh")).toBe(URLS.ssh);
+    });
 
-// git+ssh protocol
-it("should parse git+ssh urls", function (cb) {
-    var res = GitUrlParse(URLS.gitSsh);
-    Assert.strictEqual(res.protocol, "ssh");
-    Assert.strictEqual(res.source, "github.com");
-    Assert.strictEqual(res.owner, "IonicaBizau");
-    Assert.strictEqual(res.name, "node-giturlparse");
-    Assert.strictEqual(res.toString("https"), URLS.https);
-    Assert.strictEqual(res.toString("git+ssh"), URLS.gitSsh);
-    Assert.strictEqual(res.toString("ssh"), URLS.ssh);
-    cb();
-});
+    // HTTPS with ending slash
+    test.it("should parse https urls with ending slash", () => {
+        var res = gitUrlParse("https://github.com/IonicaBizau/node-giturlparse/");
+        test.expect(res.protocol).toBe("https");
+        test.expect(res.source).toBe("github.com");
+        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.name).toBe("node-giturlparse");
+        test.expect(res.toString("https")).toBe(URLS.https);
+        test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh);
+        test.expect(res.toString("ssh")).toBe(URLS.ssh);
+    });
 
-// oauth
-it("should parse oauth urls", function (cb) {
-    var res = GitUrlParse("https://token:x-oauth-basic@github.com/owner/name.git");
-    Assert.strictEqual(res.source, "github.com");
-    Assert.strictEqual(res.owner, "owner");
-    Assert.strictEqual(res.name, "name");
-    cb();
-});
+    // git+ssh protocol
+    test.it("should parse git+ssh urls", () => {
+        var res = gitUrlParse(URLS.gitSsh);
+        test.expect(res.protocol).toBe("ssh");
+        test.expect(res.source).toBe("github.com");
+        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.name).toBe("node-giturlparse");
+        test.expect(res.toString("https")).toBe(URLS.https);
+        test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh);
+        test.expect(res.toString("ssh")).toBe(URLS.ssh);
+    });
 
-// oauth bitbucket
-it("should parse Bitbucket oauth urls", function (cb) {
-    var res = GitUrlParse("https://x-token-auth:token@bitbucket.org/owner/name.git");
-    Assert.strictEqual(res.source, "bitbucket.org");
-    Assert.strictEqual(res.owner, "owner");
-    Assert.strictEqual(res.name, "name");
-    cb();
-});
+    // oauth
+    test.it("should parse oauth urls", () => {
+        var res = gitUrlParse("https://token:x-oauth-basic@github.com/owner/name.git");
+        test.expect(res.source).toBe("github.com");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+    });
 
-// https bitbucket
-it("should parse Bitbucket https urls", function (cb) {
-    var res = GitUrlParse("https://owner@bitbucket.org/owner/name");
-    Assert.strictEqual(res.source, "bitbucket.org");
-    Assert.strictEqual(res.owner, "owner");
-    Assert.strictEqual(res.name, "name");
-    cb();
-});
+    // oauth bitbucket
+    test.it("should parse Bitbucket oauth urls", () => {
+        var res = gitUrlParse("https://x-token-auth:token@bitbucket.org/owner/name.git");
+        test.expect(res.source).toBe("bitbucket.org");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+    });
 
-// https cloudforge
-it("should parse CloudForge urls", function (cb) {
-    var res = GitUrlParse("https://owner@organization.git.cloudforge.com/name.git");
-    Assert.strictEqual(res.source, "cloudforge.com");
-    Assert.strictEqual(res.owner, "owner");
-    Assert.strictEqual(res.organization, "organization");
-    Assert.strictEqual(res.name, "name");
-    cb();
+    // https bitbucket
+    test.it("should parse Bitbucket https urls", () => {
+        var res = gitUrlParse("https://owner@bitbucket.org/owner/name");
+        test.expect(res.source).toBe("bitbucket.org");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+    });
+
+    // https cloudforge
+    test.it("should parse CloudForge urls", () => {
+        var res = gitUrlParse("https://owner@organization.git.cloudforge.com/name.git");
+        test.expect(res.source).toBe("cloudforge.com");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.organization).toBe("organization");
+        test.expect(res.name).toBe("name");
+    });
 });
