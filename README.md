@@ -117,6 +117,8 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)
 
  - [`strapper`](https://npmjs.com/package/strapper) by Sam Newman
+ 
+ - [`GitPie`](https://github.com/gitpie/GitPie) by GitPie
 
 ## License
 
