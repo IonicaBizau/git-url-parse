@@ -2,9 +2,11 @@
   "name": "git-url-parse",
   "version": "5.0.1",
   "description": "A high level git url parser for common git providers.",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "node test"
+    "test": "node test",
+    "dist": "browserify lib/index.js -o dist/index.js",
+    "min": "babel dist/index.js -o dist/index.js && uglifyjs dist/index.js -cm -o dist/index.js 2>/dev/null"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
   },
   "homepage": "https://github.com/IonicaBizau/git-url-parse",
   "blah": {
+    "main": "lib/index.js",
     "h_img": "http://i.imgur.com/HlfMsVf.png"
   },
   "directories": {
