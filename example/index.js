@@ -1,5 +1,5 @@
 // Dependencies
-const GitUrlParse = require("../dist");
+const GitUrlParse = require("../lib");
 
 console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git"));
 // => {

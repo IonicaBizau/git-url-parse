@@ -104,9 +104,9 @@ If you are using this library in one of your projects, add it in this list. :spa
 
  - [`git-issues`](https://github.com/softwarescales/git-issues) by Gabriel Petrovay
 
- - [`github-publish-npm`](https://github.com/ofersadgat/github-publish-npm) by Ofer Sadgat
+ - [`git-source`](https://github.com/IonicaBizau/git-source#readme)
 
- - [`gpm`](https://github.com/IonicaBizau/gpm)
+ - [`github-publish-npm`](https://github.com/ofersadgat/github-publish-npm) by Ofer Sadgat
 
  - [`gtni`](https://nmrony.github.io/gtni) by Nur Mohammed Rony
 
@@ -117,8 +117,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)
 
  - [`strapper`](https://npmjs.com/package/strapper) by Sam Newman
- 
- - [`GitPie`](https://github.com/gitpie/GitPie) by GitPie
 
 ## License
 
