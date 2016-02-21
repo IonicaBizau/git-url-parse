@@ -1,12 +1,11 @@
 {
   "name": "git-url-parse",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "A high level git url parser for common git providers.",
   "main": "dist/index.js",
   "scripts": {
     "test": "node test",
-    "dist": "dist-it lib/index.js index.js",
-    "prepublish": "npm run dist"
+    "dist": "dist-it lib/index.js index.js"
   },
   "repository": {
     "type": "git",
