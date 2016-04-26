@@ -1,16 +1,20 @@
+
 [![git-url-parse](http://i.imgur.com/HlfMsVf.png)](#)
 
 # git-url-parse [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Travis](https://img.shields.io/travis/IonicaBizau/git-url-parse.svg)](https://travis-ci.org/IonicaBizau/git-url-parse/) [![Version](https://img.shields.io/npm/v/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse) [![Downloads](https://img.shields.io/npm/dt/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > A high level git url parser for common git providers.
 
-## Installation
+## :cloud: Installation
 
 ```sh
 $ npm i --save git-url-parse
 ```
 
-## Example
+
+## :clipboard: Example
+
+
 
 ```js
 // Dependencies
@@ -59,7 +63,8 @@ console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git").toS
 // => "https://github.com/IonicaBizau/node-git-url-parse.git"
 ```
 
-## Documentation
+## :memo: Documentation
+
 
 ### `gitUrlParse(url)`
 Parses a Git url.
@@ -96,29 +101,31 @@ Stringifies a `GitUrl` object.
 #### Return
 - **String** The stringified url.
 
-## How to contribute
+
+
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## Where is this library used?
+## :dizzy: Where is this library used?
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
- - [`git-issues`](https://github.com/softwarescales/git-issues) by Gabriel Petrovay
 
- - [`git-source`](https://github.com/IonicaBizau/git-source#readme)
+ - [`autorelease-setup`](https://github.com/tyler-johnson/autorelease-setup#readme) (by Tyler Johnson)—A CLI tool for setting up a repository with autorelease.
+ - [`documentation`](https://github.com/documentationjs/documentation#readme) (by Tom MacWright)—a documentation generator
+ - [`download-repo-cli`](https://github.com/egoist/download-repo-cli#readme) (by EGOIST)—CLI tool to download GitHub repo.
+ - [`generator-nm-bti`](https://gitlab.com/beneaththeink/generator-nm-bti#README) (by Tyler Johnson)—Scaffold out a node module, Beneath the Ink style.
+ - [`git-issues`](https://github.com/softwarescales/git-issues) (by Gabriel Petrovay)—Git issues extension to list issues of a Git project
+ - [`git-source`](https://github.com/IonicaBizau/git-source#readme)—Parse and stringify git urls in a friendly way.
+ - [`github-publish-npm`](https://github.com/ofersadgat/github-publish-npm) (by Ofer Sadgat)—This will upload publish npm assets to the GitHub Releases API.
+ - [`gtni`](https://nmrony.github.io/gtni) (by Nur Mohammed Rony)—Install your all npm dependencies recursively with gtni while you are doing git clone, fetch or pull
+ - [`nodeschool-admin`](https://github.com/nodeschool/admin#readme) (by Martin Heidegger)—CLI tool for setting up and maintaining a nodeschool chapters and other things.
+ - [`ogh`](https://github.com/egoist/ogh#readme) (by EGOIST)—Open GitHub Page of your repo directly in Terminal.
+ - [`pr-log`](https://github.com/lo1tuma/pr-log#readme) (by Mathias Schreck)—Changelog generator based on GitHub Pull Requests
+ - [`smart-clone`](https://github.com/ethernetdan/smart-clone#readme)—Clone a directory into a Golang style directory structure
+ - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)—Automagically switch on the SSH remote url in a Git repository.
+ - [`strapper`](https://npmjs.com/package/strapper) (by Sam Newman)—Coming Soon
 
- - [`github-publish-npm`](https://github.com/ofersadgat/github-publish-npm) by Ofer Sadgat
-
- - [`gtni`](https://nmrony.github.io/gtni) by Nur Mohammed Rony
-
- - [`nodeschool-admin`](https://github.com/nodeschool/admin#readme) by Martin Heidegger
-
- - [`ogh`](https://github.com/egoist/ogh#readme) by EGOIST
-
- - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)
-
- - [`strapper`](https://npmjs.com/package/strapper) by Sam Newman
-
-## License
+## :scroll: License
 
 [MIT][license] © [Ionică Bizău][website]
 
