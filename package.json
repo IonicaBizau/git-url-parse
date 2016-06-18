@@ -34,7 +34,9 @@
     "git-up": "^2.0.0"
   },
   "devDependencies": {
+    "browserify": "^13.0.1",
     "dist-it": "^2.0.0",
+    "namy": "^1.2.3",
     "tester": "^1.3.1"
   },
   "files": [
