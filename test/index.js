@@ -111,4 +111,14 @@ tester.describe("parse urls", test => {
         test.expect(res.name).toBe("id");
         test.expect(res.toString()).toBe("https://gist.github.com/id");
     });
+
+    test.should("stringify token", () => {
+        var res = gitUrlParse("https://github.com/owner/name.git");
+        res.token = "token";
+        test.expect(res.toString()).toBe("https://token@github.com/owner/name");
+
+        var res = gitUrlParse("https://owner@bitbucket.org/owner/name");
+        res.token = "token";
+        test.expect(res.toString()).toBe("https://x-token-auth:token@bitbucket.org/owner/name");
+    });
 });
