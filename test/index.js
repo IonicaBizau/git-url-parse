@@ -120,5 +120,9 @@ tester.describe("parse urls", test => {
         var res = gitUrlParse("https://owner@bitbucket.org/owner/name");
         res.token = "token";
         test.expect(res.toString()).toBe("https://x-token-auth:token@bitbucket.org/owner/name");
+
+        var res = gitUrlParse("git@github.com:owner/name.git");
+        res.port = 22;
+        test.expect(res.toString()).toBe("ssh://git@github.com:22/owner/name.git");
     });
 });
