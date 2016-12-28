@@ -124,18 +124,26 @@ If you are using this library in one of your projects, add it in this list. :spa
 
  - [`autorelease-setup`](https://github.com/tyler-johnson/autorelease-setup#readme) (by Tyler Johnson)—A CLI tool for setting up a repository with autorelease.
  - [`branch-release`](https://github.com/RomanGotsiy/branch-release#readme) (by Roman Hotsiy)—Build and tag package realease on a separate branch
+ - [`ci-yarn-upgrade`](https://github.com/taichi/ci-yarn-upgrade) (by taichi)—Keep NPM dependencies up-to-date with CI, providing version-to-version diff for each library
  - [`complan`](https://github.com/pranavparikh/complan#readme) (by Pranav Parikh)—COMPLexity ANalyzer Tool For Javascript
+ - [`docula-ui-express`](https://npmjs.com/package/docula-ui-express)—Express.js bindings for Docula project
  - [`documentation`](https://github.com/documentationjs/documentation#readme) (by Tom MacWright)—a documentation generator
  - [`download-repo-cli`](https://github.com/egoist/download-repo-cli#readme) (by EGOIST)—CLI tool to download GitHub repo.
  - [`generator-nm-bti`](https://gitlab.com/beneaththeink/generator-nm-bti#README) (by Tyler Johnson)—Scaffold out a node module, Beneath the Ink style.
  - [`generator-openapi-repo`](https://github.com/rebilly/generator-openapi-repo#readme) (by Roman Hotsiy)—Yeoman generator for OpenAPI(fka Swagger) repo to help you share spec for your API
  - [`git-issues`](https://github.com/softwarescales/git-issues) (by Gabriel Petrovay)—Git issues extension to list issues of a Git project
  - [`git-source`](https://github.com/IonicaBizau/git-source#readme)—Parse and stringify git urls in a friendly way.
+ - [`gitbook-start-https-alex-moi`](https://github.com/ULL-ESIT-SYTW-1617/https-al-servidor-del-libro-alex-moi.git#readme) (by Moises Yanes Carballo)—Plugin deploy iaas https
+ - [`gitbook-start-iaas-bbdd-alex-moi`](https://github.com/ULL-ESIT-SYTW-1617/practica-localstrategy-y-base-de-datos-alex-moi.git#readme) (by Moises Yanes Carballo)—Plugin deploy iaas bbdd
+ - [`gitbook-start-iaas-ull-es-alex-moi`](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-alex-moi.git#readme) (by Moises Yanes Carballo)—Plugin deploy maquina iaas-ull-es
+ - [`gitbook-start-iaas-ull-es-merquililycony`](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-merquililycony#readme) (by Constanza León, Merquis Cruz, Liliana Galiano)—*El objetivo de esta práctica es extender el package NodeJS publicado en npm en una práctica anterior con una nueva* *funcionalidad que permita que los usuarios realizar un despliegue automatico en el servidor de IAAS*
+ - [`gitbook-start-plugin-iaas-ull-es-noejaco2017`](http://creacion-de-paquetes-y-modulos-en-nodejs-noejaco2017/README.md) (by alu0100622492)—Despliegue plugin Iaas
  - [`github-publish-npm`](https://github.com/ofersadgat/github-publish-npm) (by Ofer Sadgat)—This will upload publish npm assets to the GitHub Releases API.
  - [`gtni`](https://nmrony.github.io/gtni) (by Nur Mohammed Rony)—Install your all npm dependencies recursively with gtni while you are doing git clone, fetch or pull
  - [`nodeschool-admin`](https://github.com/nodeschool/admin#readme) (by Martin Heidegger)—CLI tool for setting up and maintaining a nodeschool chapters and other things.
  - [`ogh`](https://github.com/egoist/ogh#readme) (by EGOIST)—Open GitHub Page of your repo directly in Terminal.
  - [`pr-log`](https://github.com/lo1tuma/pr-log#readme) (by Mathias Schreck)—Changelog generator based on GitHub Pull Requests
+ - [`proyecto-sytw-alex-moi`](https://github.com/ULL-ESIT-SYTW-1617/proyecto-sytw-16-17-alex-moi#readme) (by Moises Yanes Carballo)—Module to build a book on GitBook
  - [`ship-release`](https://github.com/IonicaBizau/ship-release#readme)—Publish new versions on GitHub and npm with ease.
  - [`sinit`](https://npmjs.com/package/sinit) (by villadora)—Project initializer based on Scaffold
  - [`smart-clone`](https://github.com/ethernetdan/smart-clone#readme)—Clone a directory into a Golang style directory structure
