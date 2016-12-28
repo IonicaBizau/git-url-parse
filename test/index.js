@@ -124,5 +124,18 @@ tester.describe("parse urls", test => {
         var res = gitUrlParse("git@github.com:owner/name.git");
         res.port = 22;
         test.expect(res.toString()).toBe("ssh://git@github.com:22/owner/name.git");
+
+        var res = gitUrlParse("user@github.com:owner/name.git");
+        test.expect(res.toString()).toBe("user@github.com:owner/name.git");
+
+        var res = gitUrlParse("git@github.com:owner/name.git");
+        res.port = 22;
+        res.user = "user";
+        test.expect(res.toString()).toBe("ssh://user@github.com:22/owner/name.git");
+
+        var res = gitUrlParse("git+ssh://git@github.com/owner/name.git");
+        res.port = 22;
+        res.user = "user";
+        test.expect(res.toString()).toBe("git+ssh://user@github.com:22/owner/name.git");
     });
 });
