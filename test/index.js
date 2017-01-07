@@ -7,6 +7,8 @@ const gitUrlParse = require("..")
 const URLS = {
     ssh: "git@github.com:IonicaBizau/git-url-parse.git"
   , https: "https://github.com/IonicaBizau/git-url-parse"
+  , ftp: "ftp://github.com/IonicaBizau/git-url-parse"
+  , ftps: "ftps://github.com/IonicaBizau/git-url-parse"
   , gitSsh: "git+ssh://git@github.com/IonicaBizau/git-url-parse.git"
 };
 
@@ -21,6 +23,32 @@ tester.describe("parse urls", test => {
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.full_name).toBe("IonicaBizau/git-url-parse");
         test.expect(res.href).toBe(URLS.ssh);
+        test.expect(res.toString("https")).toBe(URLS.https);
+        test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh);
+        test.expect(res.toString("ssh")).toBe(URLS.ssh);
+    });
+
+    // FTP urls
+    test.should("parse ftp urls", () => {
+        var res = gitUrlParse(URLS.ftp);
+        test.expect(res.protocol).toBe("ftp");
+        test.expect(res.source).toBe("github.com");
+        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.name).toBe("git-url-parse");
+        test.expect(res.href).toBe(URLS.ftp);
+        test.expect(res.toString("https")).toBe(URLS.https);
+        test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh);
+        test.expect(res.toString("ssh")).toBe(URLS.ssh);
+    });
+
+    // FTPS urls
+    test.should("parse ftps urls", () => {
+        var res = gitUrlParse(URLS.ftps);
+        test.expect(res.protocol).toBe("ftps");
+        test.expect(res.source).toBe("github.com");
+        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.name).toBe("git-url-parse");
+        test.expect(res.href).toBe(URLS.ftps);
         test.expect(res.toString("https")).toBe(URLS.https);
         test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh);
         test.expect(res.toString("ssh")).toBe(URLS.ssh);
