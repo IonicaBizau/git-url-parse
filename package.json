@@ -1,6 +1,6 @@
 {
   "name": "git-url-parse",
-  "version": "6.2.0",
+  "version": "6.2.1",
   "description": "A high level git url parser for common git providers.",
   "main": "lib/index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "git",
     "url"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/IonicaBizau/git-url-parse/issues"
@@ -41,12 +41,11 @@
     "bin/",
     "app/",
     "lib/",
-    "build/",
     "dist/",
     "src/",
+    "scripts/",
     "resources/",
     "menu/",
-    "scripts/",
     "cli.js",
     "index.js"
   ]
