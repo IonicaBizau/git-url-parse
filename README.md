@@ -65,6 +65,15 @@ console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git").toS
 // => "https://github.com/IonicaBizau/node-git-url-parse.git"
 ```
 
+## :question: Get Help
+
+There are few ways to get help:
+
+ 1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
+ 2. For bug reports and feature requests, open issues. :bug:
+ 3. For direct and quick help from me, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
+
+
 ## :memo: Documentation
 
 
@@ -139,6 +148,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`docula-ui-express`](https://npmjs.com/package/docula-ui-express)—Express.js bindings for Docula project
  - [`documentation`](https://github.com/documentationjs/documentation#readme) (by Tom MacWright)—a documentation generator
  - [`download-repo-cli`](https://github.com/egoist/download-repo-cli#readme) (by EGOIST)—CLI tool to download GitHub repo.
+ - [`generator-ckeditor4`](https://github.com/mlewand/generator-ckeditor4#readme) (by Marek Lewandowski)—Yeoman generator for CKEditor 4
  - [`generator-clearphp`](https://github.com/jkphl/generator-clearphp#readme) (by Joschi Kuphal)—Scaffold for Composer based PHP projects with a lot of integrations, advocating the use of The Clear Architecture (https://jkphl.is/articles/clear-architecture-php)
  - [`generator-nm-bti`](https://gitlab.com/beneaththeink/generator-nm-bti#README) (by Tyler Johnson)—Scaffold out a node module, Beneath the Ink style.
  - [`generator-openapi-repo`](https://github.com/rebilly/generator-openapi-repo#readme) (by Roman Hotsiy)—Yeoman generator for OpenAPI(fka Swagger) repo to help you share spec for your API
