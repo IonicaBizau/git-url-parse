@@ -6,7 +6,7 @@ const gitUrlParse = require("..")
 // Constants
 const URLS = {
     ssh: "git@github.com:IonicaBizau/git-url-parse.git"
-  , https: "https://github.com/IonicaBizau/git-url-parse"
+  , https: "https://github.com/IonicaBizau/git-url-parse.git"
   , ftp: "ftp://github.com/IonicaBizau/git-url-parse"
   , ftps: "ftps://github.com/IonicaBizau/git-url-parse"
   , gitSsh: "git+ssh://git@github.com/IonicaBizau/git-url-parse.git"
@@ -130,24 +130,24 @@ tester.describe("parse urls", test => {
         test.expect(res.resource).toBe("gist.github.com");
         test.expect(res.owner).toBe("owner");
         test.expect(res.name).toBe("id");
-        test.expect(res.toString()).toBe("https://gist.github.com/owner/id");
+        test.expect(res.toString()).toBe("https://gist.github.com/owner/id.git");
 
         res = gitUrlParse("https://gist.github.com/id");
         test.expect(res.source).toBe("github.com");
         test.expect(res.resource).toBe("gist.github.com");
         test.expect(res.owner).toBe("");
         test.expect(res.name).toBe("id");
-        test.expect(res.toString()).toBe("https://gist.github.com/id");
+        test.expect(res.toString()).toBe("https://gist.github.com/id.git");
     });
 
     test.should("stringify token", () => {
         var res = gitUrlParse("https://github.com/owner/name.git");
         res.token = "token";
-        test.expect(res.toString()).toBe("https://token@github.com/owner/name");
+        test.expect(res.toString()).toBe("https://token@github.com/owner/name.git");
 
         var res = gitUrlParse("https://owner@bitbucket.org/owner/name");
         res.token = "token";
-        test.expect(res.toString()).toBe("https://x-token-auth:token@bitbucket.org/owner/name");
+        test.expect(res.toString()).toBe("https://x-token-auth:token@bitbucket.org/owner/name.git");
 
         var res = gitUrlParse("git@github.com:owner/name.git");
         res.port = 22;
