@@ -65,13 +65,15 @@ console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git").toS
 // => "https://github.com/IonicaBizau/node-git-url-parse.git"
 ```
 
+
+
 ## :question: Get Help
 
 There are few ways to get help:
 
  1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
  2. For bug reports and feature requests, open issues. :bug:
- 3. For direct and quick help from me, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
+ 3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
 
 
 ## :memo: Documentation
@@ -140,6 +142,7 @@ If you are using this library in one of your projects, add it in this list. :spa
 
 
  - [`autorelease-setup`](https://github.com/tyler-johnson/autorelease-setup#readme) (by Tyler Johnson)—A CLI tool for setting up a repository with autorelease.
+ - [`bibi`](https://github.com/steelbrain/bibi#readme) (by steelbrain)—A repository management tool
  - [`branch-release`](https://github.com/RomanGotsiy/branch-release#readme) (by Roman Hotsiy)—Build and tag package realease on a separate branch
  - [`changelog.md`](https://github.com/egoist/changelog.md#readme) (by EGOIST)—Manage CHANGELOG.md so easy it hurts.
  - [`ci-yarn-upgrade`](https://github.com/taichi/ci-yarn-upgrade) (by taichi)—Keep NPM dependencies up-to-date with CI, providing version-to-version diff for each library
@@ -147,7 +150,9 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`docula-ui`](https://npmjs.com/package/docula-ui)—Express.js bindings for Docula project
  - [`docula-ui-express`](https://npmjs.com/package/docula-ui-express)—Express.js bindings for Docula project
  - [`documentation`](https://github.com/documentationjs/documentation#readme) (by Tom MacWright)—a documentation generator
+ - [`documentation-habitlab`](https://github.com/documentationjs/documentation#readme) (by Tom MacWright)—a documentation generator
  - [`download-repo-cli`](https://github.com/egoist/download-repo-cli#readme) (by EGOIST)—CLI tool to download GitHub repo.
+ - [`gd-cli`](https://npmjs.com/package/gd-cli) (by Sylvain Baronnet)—GD Command Line Interface
  - [`generator-ckeditor4`](https://github.com/mlewand/generator-ckeditor4#readme) (by Marek Lewandowski)—Yeoman generator for CKEditor 4
  - [`generator-clearphp`](https://github.com/jkphl/generator-clearphp#readme) (by Joschi Kuphal)—Scaffold for Composer based PHP projects with a lot of integrations, advocating the use of The Clear Architecture (https://jkphl.is/articles/clear-architecture-php)
  - [`generator-nm-bti`](https://gitlab.com/beneaththeink/generator-nm-bti#README) (by Tyler Johnson)—Scaffold out a node module, Beneath the Ink style.
