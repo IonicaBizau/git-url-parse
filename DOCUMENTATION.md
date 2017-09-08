@@ -6,6 +6,7 @@ You can see below the API reference of this module.
 Parses a Git url.
 
 #### Params
+
 - **String** `url`: The Git url to parse.
 
 #### Return
@@ -31,6 +32,7 @@ Parses a Git url.
 Stringifies a `GitUrl` object.
 
 #### Params
+
 - **GitUrl** `obj`: The parsed Git url object.
 - **String** `type`: The type of the stringified url (default `obj.protocol`).
 
