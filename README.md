@@ -168,13 +168,14 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`gitbook-start-https-alex-moi`](https://github.com/ULL-ESIT-SYTW-1617/https-al-servidor-del-libro-alex-moi.git#readme) (by Moises Yanes Carballo)—Plugin deploy iaas https
  - [`gitbook-start-iaas-bbdd-alex-moi`](https://github.com/ULL-ESIT-SYTW-1617/practica-localstrategy-y-base-de-datos-alex-moi.git#readme) (by Moises Yanes Carballo)—Plugin deploy iaas bbdd
  - [`gitbook-start-iaas-ull-es-alex-moi`](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-alex-moi.git#readme) (by Moises Yanes Carballo)—Plugin deploy maquina iaas-ull-es
- - [`gitbook-start-iaas-ull-es-merquililycony`](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-merquililycony#readme) (by Constanza León, Merquis Cruz, Liliana Galiano)—*El objetivo de esta práctica es extender el package NodeJS publicado en npm en una práctica anterior con una nueva* *funcionalidad que permita que los usuarios realizar un despliegue automatico en el servidor de IAAS*
+ - [`gitbook-start-iaas-ull-es-merquililycony`](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-merquililycony#readme) (by Constanza León, Merquis Cruz, Liliana Galiano)—*El objetivo de esta práctica es extender el package NodeJS publicado en npm en una práctica anterior con una nueva*
+ *funcionalidad que permita que los usuarios realizar un despliegue automatico en el servidor de IAAS*
  - [`gitbook-start-plugin-iaas-ull-es-noejaco2017`](http://creacion-de-paquetes-y-modulos-en-nodejs-noejaco2017/README.md) (by alu0100622492)—Despliegue plugin Iaas
  - [`github-publish-npm`](https://github.com/ofersadgat/github-publish-npm) (by Ofer Sadgat)—This will upload publish npm assets to the GitHub Releases API.
  - [`gitlab-ci-variables-setter-cli`](https://github.com/temando/gitlab-ci-variables-cli#readme) (by Khoa Tran)—CLI tool to allow setting multiple pipeline variables on Gitlab CI.
  - [`gtni`](https://nmrony.github.io/gtni) (by Nur Mohammed Rony)—Install your all npm dependencies recursively with gtni while you are doing git clone, fetch or pull
  - [`moto-connector`](https://npmjs.com/package/moto-connector) (by limingv5)—FEB平台SDK
- - [`node-coverage-server`](https://github.com/gabrielcsapo/node-coverage-server#readme) (by Gabriel J. Csapo)—A simple lcov server / cli parser
+ - [`lcov-server`](https://github.com/gabrielcsapo/lcov-server#readme) (by Gabriel J. Csapo)—A simple lcov server / cli parser
  - [`nodeschool-admin`](https://github.com/nodeschool/admin#readme) (by Martin Heidegger)—CLI tool for setting up and maintaining a nodeschool chapters and other things.
  - [`ogh`](https://github.com/egoist/ogh#readme) (by EGOIST)—Open GitHub Page of your repo directly in Terminal.
  - [`one-more-gitlab-cli`](https://github.com/chamerling/one-more-gitlab-cli) (by Christophe Hamerling)—One more Gitlab CLI
