@@ -12,7 +12,11 @@
 ## :cloud: Installation
 
 ```sh
-$ npm i --save git-url-parse
+# Using npm
+npm install --save git-url-parse
+
+# Using yarn
+yarn add git-url-parse
 ```
 
 
@@ -75,7 +79,9 @@ There are few ways to get help:
 
  1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
  2. For bug reports and feature requests, open issues. :bug:
+
  3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
+
 
 
 ## :memo: Documentation
@@ -151,6 +157,8 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`branch-release`](https://github.com/RomanGotsiy/branch-release#readme) (by Roman Hotsiy)—Build and tag package realease on a separate branch
  - [`changelog.md`](https://github.com/egoist/changelog.md#readme) (by EGOIST)—Manage CHANGELOG.md so easy it hurts.
  - [`ci-yarn-upgrade`](https://github.com/taichi/ci-yarn-upgrade) (by taichi)—Keep NPM dependencies up-to-date with CI, providing version-to-version diff for each library
+ - [`clipped`](https://github.com/clippedjs/clipped#readme) (by IniZio)—Reduce pain of configuration to once
+ - [`committing`](https://github.com/axetroy/committing#readme) (by Axetroy)—commit every days
  - [`complan`](https://github.com/pranavparikh/complan#readme) (by Pranav Parikh)—COMPLexity ANalyzer Tool For Javascript
  - [`def-core`](https://npmjs.com/package/def-core) (by tbfed)—def core for deflite
  - [`docula-ui`](https://npmjs.com/package/docula-ui)—Express.js bindings for Docula project
@@ -164,18 +172,19 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`generator-nm-bti`](https://gitlab.com/beneaththeink/generator-nm-bti#README) (by Tyler Johnson)—Scaffold out a node module, Beneath the Ink style.
  - [`generator-openapi-repo`](https://github.com/rebilly/generator-openapi-repo#readme) (by Roman Hotsiy)—Yeoman generator for OpenAPI(fka Swagger) repo to help you share spec for your API
  - [`git-issues`](https://github.com/softwarescales/git-issues) (by Gabriel Petrovay)—Git issues extension to list issues of a Git project
+ - [`git-lab-cli`](https://npmjs.com/package/git-lab-cli)—gitlab-cli ==================
+ - [`git-signed`](https://github.com/Wizcorp/git-signed#readme) (by Marc Trudel)—git commit signing made easy (and enforceable)
  - [`git-source`](https://github.com/IonicaBizau/git-source#readme)—Parse and stringify git urls in a friendly way.
  - [`gitbook-start-https-alex-moi`](https://github.com/ULL-ESIT-SYTW-1617/https-al-servidor-del-libro-alex-moi.git#readme) (by Moises Yanes Carballo)—Plugin deploy iaas https
  - [`gitbook-start-iaas-bbdd-alex-moi`](https://github.com/ULL-ESIT-SYTW-1617/practica-localstrategy-y-base-de-datos-alex-moi.git#readme) (by Moises Yanes Carballo)—Plugin deploy iaas bbdd
  - [`gitbook-start-iaas-ull-es-alex-moi`](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-alex-moi.git#readme) (by Moises Yanes Carballo)—Plugin deploy maquina iaas-ull-es
- - [`gitbook-start-iaas-ull-es-merquililycony`](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-merquililycony#readme) (by Constanza León, Merquis Cruz, Liliana Galiano)—*El objetivo de esta práctica es extender el package NodeJS publicado en npm en una práctica anterior con una nueva*
- *funcionalidad que permita que los usuarios realizar un despliegue automatico en el servidor de IAAS*
+ - [`gitbook-start-iaas-ull-es-merquililycony`](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-merquililycony#readme) (by Constanza León, Merquis Cruz, Liliana Galiano)—*El objetivo de esta práctica es extender el package NodeJS publicado en npm en una práctica anterior con una nueva* *funcionalidad que permita que los usuarios realizar un despliegue automatico en el servidor de IAAS*
  - [`gitbook-start-plugin-iaas-ull-es-noejaco2017`](http://creacion-de-paquetes-y-modulos-en-nodejs-noejaco2017/README.md) (by alu0100622492)—Despliegue plugin Iaas
  - [`github-publish-npm`](https://github.com/ofersadgat/github-publish-npm) (by Ofer Sadgat)—This will upload publish npm assets to the GitHub Releases API.
  - [`gitlab-ci-variables-setter-cli`](https://github.com/temando/gitlab-ci-variables-cli#readme) (by Khoa Tran)—CLI tool to allow setting multiple pipeline variables on Gitlab CI.
  - [`gtni`](https://nmrony.github.io/gtni) (by Nur Mohammed Rony)—Install your all npm dependencies recursively with gtni while you are doing git clone, fetch or pull
+ - [`lcov-server`](https://github.com/gabrielcsapo/lcov-server#readme) (by Gabriel J. Csapo)—🎯 A simple lcov server & cli parser
  - [`moto-connector`](https://npmjs.com/package/moto-connector) (by limingv5)—FEB平台SDK
- - [`lcov-server`](https://github.com/gabrielcsapo/lcov-server#readme) (by Gabriel J. Csapo)—A simple lcov server / cli parser
  - [`nodeschool-admin`](https://github.com/nodeschool/admin#readme) (by Martin Heidegger)—CLI tool for setting up and maintaining a nodeschool chapters and other things.
  - [`ogh`](https://github.com/egoist/ogh#readme) (by EGOIST)—Open GitHub Page of your repo directly in Terminal.
  - [`one-more-gitlab-cli`](https://github.com/chamerling/one-more-gitlab-cli) (by Christophe Hamerling)—One more Gitlab CLI
