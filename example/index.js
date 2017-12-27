@@ -54,6 +54,7 @@ console.log(GitUrlParse("https://github.com/IonicaBizau/git-url-parse/blob/maste
 //   owner: 'IonicaBizau',
 //   organization: '',
 //   ref: 'master',
+//   filepathtype: 'blob',
 //   filepath: 'test/index.js',
 //   full_name: 'IonicaBizau/git-url-parse' }
 
