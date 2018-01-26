@@ -37,6 +37,27 @@ console.log(GitUrlParse("https://github.com/IonicaBizau/node-git-url-parse.git")
 //   , owner: "IonicaBizau"
 // }
 
+console.log(GitUrlParse("https://github.com/IonicaBizau/git-url-parse/blob/master/test/index.js"));
+// { protocols: [ 'https' ],
+//   protocol: 'https',
+//   port: null,
+//   resource: 'github.com',
+//   user: '',
+//   pathname: '/IonicaBizau/git-url-parse/blob/master/test/index.js',
+//   hash: '',
+//   search: '',
+//   href: 'https://github.com/IonicaBizau/git-url-parse/blob/master/test/index.js',
+//   token: '',
+//   toString: [Function],
+//   source: 'github.com',
+//   name: 'git-url-parse',
+//   owner: 'IonicaBizau',
+//   organization: '',
+//   ref: 'master',
+//   filepathtype: 'blob',
+//   filepath: 'test/index.js',
+//   full_name: 'IonicaBizau/git-url-parse' }
+
 console.log(GitUrlParse("https://github.com/IonicaBizau/node-git-url-parse.git").toString("ssh"));
 // => "git@github.com:IonicaBizau/node-git-url-parse.git"
 
