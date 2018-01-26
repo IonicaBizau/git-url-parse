@@ -141,6 +141,12 @@ tester.describe("parse urls", test => {
         test.expect(res.source).toBe("visualstudio.com");
         test.expect(res.owner).toBe("MyProject");
         test.expect(res.name).toBe("MyRepo");
+
+        // Handle repositories and projects with spaces in the name
+        res = gitUrlParse("https://companyname.visualstudio.com/My%20Project/_git/My%20Repo");
+        test.expect(res.source).toBe("visualstudio.com");
+        test.expect(res.owner).toBe("My Project");
+        test.expect(res.name).toBe("My Repo");
     });
 
     // ref and filepath urls
