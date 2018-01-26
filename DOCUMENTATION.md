@@ -24,6 +24,9 @@ Parses a Git url.
  - `source` (String): The Git provider (e.g. `"github.com"`).
  - `owner` (String): The repository owner.
  - `name` (String): The repository name.
+ - `ref` (String): The repository ref (e.g., "master" or "dev").
+ - `filepath` (String): A filepath relative to the repository root.
+ - `filepathtype` (String): The type of filepath in the url ("blob" or "tree").
  - `full_name` (String): The owner and name values in the `owner/name` format.
  - `toString` (Function): A function to stringify the parsed url into another url type.
  - `organization` (String): The organization the owner belongs to. This is CloudForge specific.
