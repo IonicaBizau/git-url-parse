@@ -125,6 +125,19 @@ tester.describe("parse urls", test => {
         test.expect(res.name).toBe("name");
     });
 
+    // https visual studio team services
+    test.should("parse Visual Studio Team Services urls", () => {
+        var res = gitUrlParse("https://companyname.visualstudio.com/_git/MyProject");
+        test.expect(res.source).toBe("visualstudio.com");
+        test.expect(res.owner).toBe("MyProject");
+        test.expect(res.name).toBe("MyProject");
+
+        res = gitUrlParse("https://companyname.visualstudio.com/MyProject/_git/MyRepo");
+        test.expect(res.source).toBe("visualstudio.com");
+        test.expect(res.owner).toBe("MyProject");
+        test.expect(res.name).toBe("MyRepo");
+    });
+
     // ref and filepath urls
     test.should("parse ref/filepath urls", () => {
         var res = gitUrlParse(URLS.ref);
