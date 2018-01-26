@@ -27,6 +27,11 @@ tester.describe("parse urls", test => {
         test.expect(res.toString("https")).toBe(URLS.https);
         test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh);
         test.expect(res.toString("ssh")).toBe(URLS.ssh);
+
+        res.git_suffix = true
+        test.expect(res.toString("https")).toBe(URLS.https + ".git");
+        test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh + ".git");
+        test.expect(res.toString("ssh")).toBe(URLS.ssh + ".git");
     });
 
     // FTP urls
