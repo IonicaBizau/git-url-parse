@@ -30,6 +30,7 @@ Parses a Git url.
  - `full_name` (String): The owner and name values in the `owner/name` format.
  - `toString` (Function): A function to stringify the parsed url into another url type.
  - `organization` (String): The organization the owner belongs to. This is CloudForge specific.
+ - `git_suffix` (Boolean): Whether to add the `.git` suffix or not.
 
 ### `stringify(obj, type)`
 Stringifies a `GitUrl` object.
