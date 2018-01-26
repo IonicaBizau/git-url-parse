@@ -5,11 +5,11 @@ const gitUrlParse = require("..")
 
 // Constants
 const URLS = {
-    ssh: "git@github.com:IonicaBizau/git-url-parse.git"
-  , https: "https://github.com/IonicaBizau/git-url-parse.git"
+    ssh: "git@github.com:IonicaBizau/git-url-parse"
+  , https: "https://github.com/IonicaBizau/git-url-parse"
   , ftp: "ftp://github.com/IonicaBizau/git-url-parse"
   , ftps: "ftps://github.com/IonicaBizau/git-url-parse"
-  , gitSsh: "git+ssh://git@github.com/IonicaBizau/git-url-parse.git"
+  , gitSsh: "git+ssh://git@github.com/IonicaBizau/git-url-parse"
   , ref: "https://github.com/IonicaBizau/git-url-parse/blob/master/test/index.js"
 };
 
@@ -157,40 +157,40 @@ tester.describe("parse urls", test => {
         test.expect(res.resource).toBe("gist.github.com");
         test.expect(res.owner).toBe("owner");
         test.expect(res.name).toBe("id");
-        test.expect(res.toString()).toBe("https://gist.github.com/owner/id.git");
+        test.expect(res.toString()).toBe("https://gist.github.com/owner/id");
 
         res = gitUrlParse("https://gist.github.com/id");
         test.expect(res.source).toBe("github.com");
         test.expect(res.resource).toBe("gist.github.com");
         test.expect(res.owner).toBe("");
         test.expect(res.name).toBe("id");
-        test.expect(res.toString()).toBe("https://gist.github.com/id.git");
+        test.expect(res.toString()).toBe("https://gist.github.com/id");
     });
 
     test.should("stringify token", () => {
         var res = gitUrlParse("https://github.com/owner/name.git");
         res.token = "token";
-        test.expect(res.toString()).toBe("https://token@github.com/owner/name.git");
+        test.expect(res.toString()).toBe("https://token@github.com/owner/name");
 
         var res = gitUrlParse("https://owner@bitbucket.org/owner/name");
         res.token = "token";
-        test.expect(res.toString()).toBe("https://x-token-auth:token@bitbucket.org/owner/name.git");
+        test.expect(res.toString()).toBe("https://x-token-auth:token@bitbucket.org/owner/name");
 
-        var res = gitUrlParse("git@github.com:owner/name.git");
+        var res = gitUrlParse("git@github.com:owner/name");
         res.port = 22;
-        test.expect(res.toString()).toBe("ssh://git@github.com:22/owner/name.git");
+        test.expect(res.toString()).toBe("ssh://git@github.com:22/owner/name");
 
         var res = gitUrlParse("user@github.com:owner/name.git");
-        test.expect(res.toString()).toBe("user@github.com:owner/name.git");
+        test.expect(res.toString()).toBe("user@github.com:owner/name");
 
         var res = gitUrlParse("git@github.com:owner/name.git");
         res.port = 22;
         res.user = "user";
-        test.expect(res.toString()).toBe("ssh://user@github.com:22/owner/name.git");
+        test.expect(res.toString()).toBe("ssh://user@github.com:22/owner/name");
 
         var res = gitUrlParse("git+ssh://git@github.com/owner/name.git");
         res.port = 22;
         res.user = "user";
-        test.expect(res.toString()).toBe("git+ssh://user@github.com:22/owner/name.git");
+        test.expect(res.toString()).toBe("git+ssh://user@github.com:22/owner/name");
     });
 });
