@@ -141,12 +141,14 @@ tester.describe("parse urls", test => {
         test.expect(res.source).toBe("visualstudio.com");
         test.expect(res.owner).toBe("MyProject");
         test.expect(res.name).toBe("MyRepo");
+    });
 
-        // Handle repositories and projects with spaces in the name
-        res = gitUrlParse("https://companyname.visualstudio.com/My%20Project/_git/My%20Repo");
-        test.expect(res.source).toBe("visualstudio.com");
-        test.expect(res.owner).toBe("My Project");
-        test.expect(res.name).toBe("My Repo");
+    // Handle URL encoded names of owners and repositories
+    test.should("https URLs with URL encoded characters", () => {
+      var res = gitUrlParse("https://companyname.visualstudio.com/My%20Project/_git/My%20Repo");
+      test.expect(res.source).toBe("visualstudio.com");
+      test.expect(res.owner).toBe("My Project");
+      test.expect(res.name).toBe("My Repo");
     });
 
     // ref and filepath urls
