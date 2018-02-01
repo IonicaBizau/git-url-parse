@@ -162,6 +162,16 @@ tester.describe("parse urls", test => {
         test.expect(res.ref).toBe("master");
         test.expect(res.filepathtype).toBe("blob");
         test.expect(res.filepath).toBe("test/index.js");
+
+        res = gitUrlParse("https://gitlab.com/a/b/c/d/blob/master/test/index.js");
+        test.expect(res.protocol).toBe("https");
+        test.expect(res.source).toBe("gitlab.com");
+        test.expect(res.owner).toBe("a/b/c");
+        test.expect(res.name).toBe("d");
+        test.expect(res.href).toBe("https://gitlab.com/a/b/c/d/blob/master/test/index.js");
+        test.expect(res.ref).toBe("master");
+        test.expect(res.filepathtype).toBe("blob");
+        test.expect(res.filepath).toBe("test/index.js");
     });
 
     test.should("parse subdomains", () => {
@@ -180,10 +190,39 @@ tester.describe("parse urls", test => {
         test.expect(res.toString()).toBe("https://gist.github.com/id");
     });
 
+    // subgroups
+    test.should("parse gitlab subgroups", () => {
+        var res = gitUrlParse("https://gitlab.com/group/subgroup/id");
+        test.expect(res.protocol).toBe("https");
+        test.expect(res.source).toBe("gitlab.com");
+        test.expect(res.owner).toBe("group/subgroup");
+        test.expect(res.name).toBe("id");
+        test.expect(res.href).toBe("https://gitlab.com/group/subgroup/id");
+        test.expect(res.toString("https")).toBe("https://gitlab.com/group/subgroup/id");
+        test.expect(res.toString("git+ssh")).toBe("git+ssh://git@gitlab.com/group/subgroup/id");
+        test.expect(res.toString("ssh")).toBe("git@gitlab.com:group/subgroup/id");
+        test.expect(res.toString()).toBe("https://gitlab.com/group/subgroup/id");
+
+        res = gitUrlParse("git@gitlab.com:a/b/c/d.git");
+        test.expect(res.protocol).toBe("ssh");
+        test.expect(res.source).toBe("gitlab.com");
+        test.expect(res.owner).toBe("a/b/c");
+        test.expect(res.name).toBe("d");
+        test.expect(res.href).toBe("git@gitlab.com:a/b/c/d.git");
+        test.expect(res.toString("https")).toBe("https://gitlab.com/a/b/c/d");
+        test.expect(res.toString("git+ssh")).toBe("git+ssh://git@gitlab.com/a/b/c/d");
+        test.expect(res.toString("ssh")).toBe("git@gitlab.com:a/b/c/d");
+        test.expect(res.toString()).toBe("git@gitlab.com:a/b/c/d");
+    });
+
     test.should("stringify token", () => {
         var res = gitUrlParse("https://github.com/owner/name.git");
         res.token = "token";
         test.expect(res.toString()).toBe("https://token@github.com/owner/name");
+
+        var res = gitUrlParse("https://gitlab.com/group/subgroup/name.git");
+        res.token = "token";
+        test.expect(res.toString()).toBe("https://token@gitlab.com/group/subgroup/name");
 
         var res = gitUrlParse("https://owner@bitbucket.org/owner/name");
         res.token = "token";
