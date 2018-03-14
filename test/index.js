@@ -141,6 +141,17 @@ tester.describe("parse urls", test => {
         test.expect(res.source).toBe("visualstudio.com");
         test.expect(res.owner).toBe("MyProject");
         test.expect(res.name).toBe("MyRepo");
+
+        // Legacy URLs
+        res = gitUrlParse("https://companyname.visualstudio.com/DefaultCollection/_git/MyRepo");
+        test.expect(res.source).toBe("visualstudio.com");
+        test.expect(res.owner).toBe("MyRepo");
+        test.expect(res.name).toBe("MyRepo");
+
+        res = gitUrlParse("https://companyname.visualstudio.com/DefaultCollection/MyProject/_git/MyRepo");
+        test.expect(res.source).toBe("visualstudio.com");
+        test.expect(res.owner).toBe("MyProject");
+        test.expect(res.name).toBe("MyRepo");
     });
 
     // Handle URL encoded names of owners and repositories
