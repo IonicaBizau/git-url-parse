@@ -97,6 +97,16 @@ tester.describe("parse urls", test => {
         test.expect(res.toString("ssh")).toBe(URLS.ssh);
     });
 
+    // HTTPS with basic auth
+    test.should("parse https urls with basic auth", () => {
+        var res = gitUrlParse("https://user:password@github.com/IonicaBizau/git-url-parse");
+        test.expect(res.protocol).toBe("https");
+        test.expect(res.source).toBe("github.com");
+        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.name).toBe("git-url-parse");
+        test.expect(res.user).toBe("user:password");
+    });
+
     // oauth
     test.should("parse oauth urls", () => {
         var res = gitUrlParse("https://token:x-oauth-basic@github.com/owner/name.git");
@@ -255,5 +265,13 @@ tester.describe("parse urls", test => {
         res.port = 22;
         res.user = "user";
         test.expect(res.toString()).toBe("git+ssh://user@github.com:22/owner/name");
+
+        var res = gitUrlParse("https://github.com/owner/name.git");
+        res.user = "user";
+        test.expect(res.toString()).toBe("https://user@github.com/owner/name");
+
+        var res = gitUrlParse("http://github.com/owner/name.git");
+        res.user = "user";
+        test.expect(res.toString()).toBe("http://user@github.com/owner/name");
     });
 });
