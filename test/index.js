@@ -256,4 +256,9 @@ tester.describe("parse urls", test => {
         res.user = "user";
         test.expect(res.toString()).toBe("git+ssh://user@github.com:22/owner/name");
     });
+
+    test.should("custom url", () => {
+        var res = gitUrlParse("https://git.test.com.cn/a/b");
+        test.expect(res.source).toBe('test.com.cn');
+    })
 });
