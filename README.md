@@ -180,6 +180,7 @@ If you are using this library in one of your projects, add it in this list. :spa
 
 
  - [`autorelease-setup`](https://github.com/tyler-johnson/autorelease-setup#readme) (by Tyler Johnson)—A CLI tool for setting up a repository with autorelease.
+ - [`belt-repo`](https://npmjs.com/package/belt-repo) (by ewnd9)—repo module for belt
  - [`bibi`](https://github.com/steelbrain/bibi#readme) (by steelbrain)—A repository management tool
  - [`branch-release`](https://github.com/RomanGotsiy/branch-release#readme) (by Roman Hotsiy)—Build and tag package realease on a separate branch
  - [`changelog.md`](https://github.com/egoist/changelog.md#readme) (by EGOIST)—Manage CHANGELOG.md so easy it hurts.
