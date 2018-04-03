@@ -275,8 +275,13 @@ tester.describe("parse urls", test => {
         test.expect(res.toString()).toBe("http://user@github.com/owner/name");
     });
 
-    test.should("custom url", () => {
+    test.it("custom url", () => {
         var res = gitUrlParse("https://git.test.com.cn/a/b");
         test.expect(res.source).toBe('test.com.cn');
+    })
+
+    test.it("local urls", () => {
+        var res = gitUrlParse("http://machine:8080/tfs/Collection/Project.Name/_git/repository");
+        test.expect(res.source).toBe('machine');
     })
 });
