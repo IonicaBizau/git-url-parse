@@ -162,6 +162,7 @@ tester.describe("parse urls", test => {
         test.expect(res.source).toBe("visualstudio.com");
         test.expect(res.owner).toBe("MyProject");
         test.expect(res.name).toBe("MyRepo");
+        debugger
         test.expect(res.toString()).toBe("https://companyname.visualstudio.com/DefaultCollection/MyProject/_git/MyRepo")
     });
 
