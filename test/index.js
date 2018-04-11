@@ -146,22 +146,28 @@ tester.describe("parse urls", test => {
         test.expect(res.source).toBe("visualstudio.com");
         test.expect(res.owner).toBe("MyProject");
         test.expect(res.name).toBe("MyProject");
+        test.expect(res.toString()).toBe("https://companyname.visualstudio.com/_git/MyProject");
 
         res = gitUrlParse("https://companyname.visualstudio.com/MyProject/_git/MyRepo");
         test.expect(res.source).toBe("visualstudio.com");
         test.expect(res.owner).toBe("MyProject");
         test.expect(res.name).toBe("MyRepo");
+        test.expect(res.toString()).toBe("https://companyname.visualstudio.com/MyProject/_git/MyRepo");
 
         // Legacy URLs
         res = gitUrlParse("https://companyname.visualstudio.com/DefaultCollection/_git/MyRepo");
         test.expect(res.source).toBe("visualstudio.com");
         test.expect(res.owner).toBe("MyRepo");
         test.expect(res.name).toBe("MyRepo");
+        test.expect(res.organization).toBe("DefaultCollection");
+        test.expect(res.toString()).toBe("https://companyname.visualstudio.com/DefaultCollection/_git/MyRepo");
 
         res = gitUrlParse("https://companyname.visualstudio.com/DefaultCollection/MyProject/_git/MyRepo");
         test.expect(res.source).toBe("visualstudio.com");
         test.expect(res.owner).toBe("MyProject");
         test.expect(res.name).toBe("MyRepo");
+        test.expect(res.organization).toBe("DefaultCollection");
+        test.expect(res.toString()).toBe("https://companyname.visualstudio.com/DefaultCollection/MyProject/_git/MyRepo");
     });
 
     // Handle URL encoded names of owners and repositories
