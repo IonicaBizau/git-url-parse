@@ -160,7 +160,7 @@ tester.describe("parse urls", test => {
         test.expect(res.owner).toBe("MyRepo");
         test.expect(res.name).toBe("MyRepo");
         test.expect(res.organization).toBe("DefaultCollection");
-        +      test.expect(res.toString()).toBe("https://companyname.visualstudio.com/DefaultCollection/_git/MyRepo");
+        test.expect(res.toString()).toBe("https://companyname.visualstudio.com/DefaultCollection/_git/MyRepo");
 
         res = gitUrlParse("https://companyname.visualstudio.com/DefaultCollection/MyProject/_git/MyRepo");
         test.expect(res.source).toBe("visualstudio.com");
