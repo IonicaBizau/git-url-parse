@@ -6,11 +6,11 @@ const gitUrlParse = require("..")
 // Constants
 const URLS = {
     ssh: "git@github.com:IonicaBizau/git-url-parse"
-  , https: "https://github.com/IonicaBizau/git-url-parse"
-  , ftp: "ftp://github.com/IonicaBizau/git-url-parse"
-  , ftps: "ftps://github.com/IonicaBizau/git-url-parse"
-  , gitSsh: "git+ssh://git@github.com/IonicaBizau/git-url-parse"
-  , ref: "https://github.com/IonicaBizau/git-url-parse/blob/master/test/index.js"
+    , https: "https://github.com/IonicaBizau/git-url-parse"
+    , ftp: "ftp://github.com/IonicaBizau/git-url-parse"
+    , ftps: "ftps://github.com/IonicaBizau/git-url-parse"
+    , gitSsh: "git+ssh://git@github.com/IonicaBizau/git-url-parse"
+    , ref: "https://github.com/IonicaBizau/git-url-parse/blob/master/test/index.js"
 };
 
 tester.describe("parse urls", test => {
@@ -146,32 +146,36 @@ tester.describe("parse urls", test => {
         test.expect(res.source).toBe("visualstudio.com");
         test.expect(res.owner).toBe("MyProject");
         test.expect(res.name).toBe("MyProject");
+        test.expect(res.toString()).toBe("https://companyname.visualstudio.com/_git/MyProject");
 
         res = gitUrlParse("https://companyname.visualstudio.com/MyProject/_git/MyRepo");
         test.expect(res.source).toBe("visualstudio.com");
         test.expect(res.owner).toBe("MyProject");
         test.expect(res.name).toBe("MyRepo");
+        test.expect(res.toString()).toBe("https://companyname.visualstudio.com/MyProject/_git/MyRepo");
 
         // Legacy URLs
         res = gitUrlParse("https://companyname.visualstudio.com/DefaultCollection/_git/MyRepo");
         test.expect(res.source).toBe("visualstudio.com");
         test.expect(res.owner).toBe("MyRepo");
         test.expect(res.name).toBe("MyRepo");
+        test.expect(res.organization).toBe("DefaultCollection");
+        +      test.expect(res.toString()).toBe("https://companyname.visualstudio.com/DefaultCollection/_git/MyRepo");
 
         res = gitUrlParse("https://companyname.visualstudio.com/DefaultCollection/MyProject/_git/MyRepo");
         test.expect(res.source).toBe("visualstudio.com");
         test.expect(res.owner).toBe("MyProject");
         test.expect(res.name).toBe("MyRepo");
-        debugger
+        test.expect(res.organization).toBe("DefaultCollection");
         test.expect(res.toString()).toBe("https://companyname.visualstudio.com/DefaultCollection/MyProject/_git/MyRepo")
     });
 
     // Handle URL encoded names of owners and repositories
     test.should("https URLs with URL encoded characters", () => {
-      var res = gitUrlParse("https://companyname.visualstudio.com/My%20Project/_git/My%20Repo");
-      test.expect(res.source).toBe("visualstudio.com");
-      test.expect(res.owner).toBe("My Project");
-      test.expect(res.name).toBe("My Repo");
+        var res = gitUrlParse("https://companyname.visualstudio.com/My%20Project/_git/My%20Repo");
+        test.expect(res.source).toBe("visualstudio.com");
+        test.expect(res.owner).toBe("My Project");
+        test.expect(res.name).toBe("My Repo");
     });
 
     // ref and filepath urls
