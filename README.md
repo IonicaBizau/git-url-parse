@@ -181,6 +181,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`belt-repo`](https://npmjs.com/package/belt-repo) (by ewnd9)—repo module for belt
  - [`bibi`](https://github.com/steelbrain/bibi#readme) (by steelbrain)—A repository management tool
  - [`branch-release`](https://github.com/RomanGotsiy/branch-release#readme) (by Roman Hotsiy)—Build and tag package realease on a separate branch
+ - [`certbot-git-controller`](https://npmjs.com/package/certbot-git-controller) (by Loïc Mahieu)—Simple tool that use certbot for managing Let's Encrypt certificates. It creates a webserver that listen for http-01 challenge and use a git repository as store.
  - [`changelog.md`](https://github.com/egoist/changelog.md#readme) (by EGOIST)—Manage CHANGELOG.md so easy it hurts.
  - [`ci-yarn-upgrade`](https://github.com/taichi/ci-yarn-upgrade) (by taichi)—Keep NPM dependencies up-to-date with CI, providing version-to-version diff for each library
  - [`clipped`](https://github.com/clippedjs/clipped#readme) (by IniZio)—Reduce pain of configuration to once
@@ -190,6 +191,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`docula-ui`](https://npmjs.com/package/docula-ui)—Express.js bindings for Docula project
  - [`docula-ui-express`](https://npmjs.com/package/docula-ui-express)—Express.js bindings for Docula project
  - [`documentation`](https://github.com/documentationjs/documentation#readme) (by Tom MacWright)—a documentation generator
+ - [`documentation-custom-markdown`](https://npmjs.com/package/documentation-custom-markdown) (by Tom MacWright)—a documentation generator
  - [`documentation-fork`](https://github.com/documentationjs/documentation#readme) (by Tom MacWright)—a documentation generator
  - [`documentation-habitlab`](https://github.com/documentationjs/documentation#readme) (by Tom MacWright)—a documentation generator
  - [`download-repo-cli`](https://github.com/egoist/download-repo-cli#readme) (by EGOIST)—CLI tool to download GitHub repo.
@@ -212,8 +214,10 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`gitc`](https://github.com/cezarlz/gitc#readme) (by Cezar Luiz)—Manage your pull requests and issues from your command line.
  - [`github-publish-npm`](https://github.com/ofersadgat/github-publish-npm) (by Ofer Sadgat)—This will upload publish npm assets to the GitHub Releases API.
  - [`gitlab-ci-variables-cli`](https://github.com/temando/gitlab-ci-variables-cli#readme) (by Khoa Tran)—CLI tool to set/get pipeline variables on Gitlab CI.
+ - [`gitlab-tool-cli`](https://npmjs.com/package/gitlab-tool-cli)—gitlab-tool-cli ==================
  - [`gitline`](https://github.com/cezarlz/gitline#readme) (by Cezar Luiz)—Manage your pull requests and issues from your command line.
- - [`gtni`](https://nmrony.github.io/gtni) (by Nur Mohammed Rony)—Install your all npm dependencies recursively with gtni while you are doing git clone, fetch or pull
+ - [`gtni`](https://nmrony.github.io/gtni) (by Nur Rony)—Install your all npm dependencies recursively with gtni while you are doing git clone, fetch or pull
+ - [`gub`](https://github.com/janryWang/gub#readme) (by janry)—> 接入成本极低，快速从原有项目(可运行项目)中clone出新项目，并重写package.json，安装依赖
  - [`kef-core`](https://npmjs.com/package/kef-core) (by younth)—The awesome KEF
  - [`lcov-server`](https://github.com/gabrielcsapo/lcov-server#readme) (by Gabriel J. Csapo)—🎯 A simple lcov server & cli parser
  - [`moto-connector`](https://npmjs.com/package/moto-connector) (by limingv5)—FEB平台SDK
@@ -228,6 +232,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`smart-clone`](https://github.com/ethernetdan/smart-clone#readme)—Clone a directory into a Golang style directory structure
  - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)—Automagically switch on the SSH remote url in a Git repository.
  - [`strapper`](https://npmjs.com/package/strapper) (by Sam Newman)—Coming Soon
+ - [`vscode-gpm`](https://github.com/axetroy/vscode-gpm#readme)—Git Project Manager
 
 ## :scroll: License
 
