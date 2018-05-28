@@ -11,6 +11,7 @@ const URLS = {
   , ftps: "ftps://github.com/IonicaBizau/git-url-parse"
   , gitSsh: "git+ssh://git@github.com/IonicaBizau/git-url-parse"
   , ref: "https://github.com/IonicaBizau/git-url-parse/blob/master/test/index.js"
+  , shorthand: "IonicaBizau/git-url-parse"
 };
 
 tester.describe("parse urls", test => {
@@ -199,6 +200,16 @@ tester.describe("parse urls", test => {
         test.expect(res.ref).toBe("master");
         test.expect(res.filepathtype).toBe("blob");
         test.expect(res.filepath).toBe("test/index.js");
+    });
+
+    // shorthand urls
+    test.should("parse shorthand urls", () => {
+        var res = gitUrlParse(URLS.shorthand);
+        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.name).toBe("git-url-parse");
+        test.expect(res.href).toBe(URLS.shorthand);
+        test.expect(res.full_name).toBe("IonicaBizau/git-url-parse");
+        test.expect(res.pathname).toBe("IonicaBizau/git-url-parse");
     });
 
     test.should("parse subdomains", () => {
