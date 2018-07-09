@@ -170,6 +170,14 @@ tester.describe("parse urls", test => {
         test.expect(res.toString()).toBe("https://companyname.visualstudio.com/DefaultCollection/MyProject/_git/MyRepo");
     });
 
+    // custom git hosted URL with 2 parts SLD
+    test.should("parse Gih hosted urls with two parts SLD", () => {
+        var res = gitUrlParse("https://domain.git.com.cn/owner/name.git");
+        test.expect(res.source).toBe("git.com.cn");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+    });
+
     // Handle URL encoded names of owners and repositories
     test.should("https URLs with URL encoded characters", () => {
       var res = gitUrlParse("https://companyname.visualstudio.com/My%20Project/_git/My%20Repo");
