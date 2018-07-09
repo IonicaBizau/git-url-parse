@@ -29,8 +29,7 @@
     "test": "test"
   },
   "dependencies": {
-    "git-up": "^2.0.0",
-    "parse-domain": "^2.0.0"
+    "git-up": "^2.0.0"
   },
   "devDependencies": {
     "browserify": "^13.0.1",

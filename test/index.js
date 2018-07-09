@@ -280,9 +280,4 @@ tester.describe("parse urls", test => {
         res.user = "user";
         test.expect(res.toString()).toBe("http://user@github.com/owner/name.git");
     });
-
-    test.should("custom url", () => {
-        var res = gitUrlParse("https://git.test.com.cn/a/b");
-        test.expect(res.source).toBe('test.com.cn');
-    })
 });
