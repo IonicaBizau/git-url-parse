@@ -196,6 +196,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`documentation-habitlab`](https://github.com/documentationjs/documentation#readme) (by Tom MacWright)—a documentation generator
  - [`download-repo-cli`](https://github.com/egoist/download-repo-cli#readme) (by EGOIST)—CLI tool to download GitHub repo.
  - [`gd-cli`](https://npmjs.com/package/gd-cli) (by Sylvain Baronnet)—GD Command Line Interface
+ - [`generate-preview`](https://github.com/citizensas/generate-preview#readme) (by Sassoun Derderian)—Get a preview from a git branch before publishing your npm package
  - [`generator-ckeditor4`](https://github.com/mlewand/generator-ckeditor4#readme) (by Marek Lewandowski)—Yeoman generator for CKEditor 4
  - [`generator-clearphp`](https://github.com/jkphl/generator-clearphp#readme) (by Joschi Kuphal)—Scaffold for Composer based PHP projects with a lot of integrations, advocating the use of The Clear Architecture (https://jkphl.is/articles/clear-architecture-php)
  - [`generator-nm-bti`](https://gitlab.com/beneaththeink/generator-nm-bti#README) (by Tyler Johnson)—Scaffold out a node module, Beneath the Ink style.
@@ -220,7 +221,9 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`gub`](https://github.com/janryWang/gub#readme) (by janry)—> 接入成本极低，快速从原有项目(可运行项目)中clone出新项目，并重写package.json，安装依赖
  - [`kef-core`](https://npmjs.com/package/kef-core) (by younth)—The awesome KEF
  - [`lcov-server`](https://github.com/gabrielcsapo/lcov-server#readme) (by Gabriel J. Csapo)—🎯 A simple lcov server & cli parser
- - [`moto-connector`](https://npmjs.com/package/moto-connector) (by limingv5)—FEB平台SDK
+ - [`miguelcostero-ng2-toasty`](https://github.com/akserg/ng2-toasty) (by Sergey Akopkokhyants)—Angular2 Toasty component shows growl-style alerts and messages for your web app
+ - [`moto-connector`](https://npmjs.com/package/moto-connector) (by limingv5)—JAN平台SDK
+ - [`node-norman`](https://github.com/zenwarr/norman#readme) (by zenwarr)—
  - [`nodeschool-admin`](https://github.com/nodeschool/admin#readme) (by Martin Heidegger)—CLI tool for setting up and maintaining a nodeschool chapters and other things.
  - [`ogh`](https://github.com/egoist/ogh#readme) (by EGOIST)—Open GitHub Page of your repo directly in Terminal.
  - [`one-more-gitlab-cli`](https://github.com/chamerling/one-more-gitlab-cli) (by Christophe Hamerling)—One more Gitlab CLI
@@ -230,9 +233,11 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`ship-release`](https://github.com/IonicaBizau/ship-release#readme)—Publish new versions on GitHub and npm with ease.
  - [`sinit`](https://npmjs.com/package/sinit) (by villadora)—Project initializer based on Scaffold
  - [`smart-clone`](https://github.com/ethernetdan/smart-clone#readme)—Clone a directory into a Golang style directory structure
+ - [`snipx`](https://npmjs.com/package/snipx)—Best team snippets
  - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)—Automagically switch on the SSH remote url in a Git repository.
  - [`strapper`](https://npmjs.com/package/strapper) (by Sam Newman)—Coming Soon
  - [`vscode-gpm`](https://github.com/axetroy/vscode-gpm#readme)—Git Project Manager
+ - [`yarn-upgrade-on-ci`](https://npmjs.com/package/yarn-upgrade-on-ci) (by htwroclau)—undefined
 
 ## :scroll: License
 
