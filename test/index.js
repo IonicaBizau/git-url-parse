@@ -142,8 +142,32 @@ tester.describe("parse urls", test => {
         test.expect(res.name).toBe("name");
     });
 
-    // https visual studio team services
-    test.should("parse Visual Studio Team Services urls", () => {
+    // https Azure DevOps (formerly Visual Studio Team Services)
+    test.should("parse Azure DevOps HTTPS urls", () => {
+        // Parse URL for matching project and repo names
+        var res = gitUrlParse("https://dev.azure.com/MyOrganization/MatchedName/MyTeam/_git/MatchedName");
+        test.expect(res.source).toBe("azure.com");
+        test.expect(res.owner).toBe("MatchedName");
+        test.expect(res.name).toBe("MatchedName");
+
+        // Parse URL for non-matching project and repo names
+        res = gitUrlParse("https://dev.azure.com/MyOrganization/MyProject/_git/MyRepo");
+        test.expect(res.source).toBe("azure.com");
+        test.expect(res.owner).toBe("MyProject");
+        test.expect(res.name).toBe("MyRepo");
+    });
+
+    // ssh Azure DevOps (formerly Visual Studio Team Services)
+    test.should("parse Azure DevOps SSH urls", () => {
+        // Parse URL for matching project and repo names
+        var res = gitUrlParse("git@ssh.dev.azure.com:v3/CompanyName/ProjectName/RepoName");
+        test.expect(res.source).toBe("dev.azure.com");
+        test.expect(res.owner).toBe("ProjectName");
+        test.expect(res.name).toBe("RepoName");
+    });
+
+    // https Visual Studio Team Services (VSTS)
+    test.should("parse Visual Studio Team Services (VSTS) HTTPS urls", () => {
         var res = gitUrlParse("https://companyname.visualstudio.com/_git/MyProject");
         test.expect(res.source).toBe("visualstudio.com");
         test.expect(res.owner).toBe("MyProject");
@@ -170,6 +194,14 @@ tester.describe("parse urls", test => {
         test.expect(res.name).toBe("MyRepo");
         test.expect(res.organization).toBe("DefaultCollection");
         test.expect(res.toString()).toBe("https://companyname.visualstudio.com/DefaultCollection/MyProject/_git/MyRepo");
+    });
+
+    // ssh Visual Studio Team Services (VSTS)
+    test.should("parse Visual Studio Team Services (VSTS) SSH urls", () => {
+        var res = gitUrlParse("CompanyName@vs-ssh.visualstudio.com:v3/CompanyName/ProjectName/RepoName");
+        test.expect(res.source).toBe("visualstudio.com");
+        test.expect(res.owner).toBe("ProjectName");
+        test.expect(res.name).toBe("RepoName");
     });
 
     // custom git hosted URL with 2 parts SLD
