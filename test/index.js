@@ -12,6 +12,7 @@ const URLS = {
   , gitSsh: "git+ssh://git@github.com/IonicaBizau/git-url-parse"
   , ref: "https://github.com/IonicaBizau/git-url-parse/blob/master/test/index.js"
   , shorthand: "IonicaBizau/git-url-parse"
+  , commit: "https://github.com/IonicaBizau/git-url-parse/commit/9c6443245ace92d237b7b274d4606a616e071c4e"
 };
 
 tester.describe("parse urls", test => {
@@ -298,5 +299,12 @@ tester.describe("parse urls", test => {
         var res = gitUrlParse("http://github.com/owner/name.git");
         res.user = "user";
         test.expect(res.toString()).toBe("http://user@github.com/owner/name.git");
+    });
+
+    // commits
+    test.should("parse commit urls", () => {
+        var res = gitUrlParse(URLS.commit);
+        test.expect(res.name).toBe("git-url-parse");
+        test.expect(res.commit).toBe("9c6443245ace92d237b7b274d4606a616e071c4e");
     });
 });
