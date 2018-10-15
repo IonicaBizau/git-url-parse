@@ -157,7 +157,7 @@ Have an idea? Found a bug? See [how to contribute][contributing].
 
 ## :sparkling_heart: Support my projects
 
-I open-source almost everything I can, and I try to reply everyone needing help using these projects. Obviously,
+I open-source almost everything I can, and I try to reply to everyone needing help using these projects. Obviously,
 this takes time. You can integrate and use these projects in your applications *for free*! You can even change the source code and redistribute (even resell it).
 
 However, if you get some profit from this or just want to encourage me to continue creating stuff, there are few ways you can do it:
@@ -181,11 +181,11 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`belt-repo`](https://npmjs.com/package/belt-repo) (by ewnd9)—repo module for belt
  - [`bibi`](https://github.com/steelbrain/bibi#readme) (by steelbrain)—A repository management tool
  - [`branch-release`](https://github.com/RomanGotsiy/branch-release#readme) (by Roman Hotsiy)—Build and tag package realease on a separate branch
- - [`certbot-git-controller`](https://npmjs.com/package/certbot-git-controller) (by Loïc Mahieu)—Simple tool that use certbot for managing Let's Encrypt certificates. It creates a webserver that listen for http-01 challenge and use a git repository as store.
  - [`changelog.md`](https://github.com/egoist/changelog.md#readme) (by EGOIST)—Manage CHANGELOG.md so easy it hurts.
  - [`ci-yarn-upgrade`](https://github.com/taichi/ci-yarn-upgrade) (by taichi)—Keep NPM dependencies up-to-date with CI, providing version-to-version diff for each library
  - [`clipped`](https://github.com/clippedjs/clipped#readme) (by IniZio)—Reduce pain of configuration to once
  - [`committing`](https://github.com/axetroy/committing#readme) (by Axetroy)—commit every days
+ - [`common-boilerplate`](https://github.com/node-modules/common-boilerplate#readme) (by TZ)—base class for boilerplate
  - [`complan`](https://github.com/pranavparikh/complan#readme) (by Pranav Parikh)—COMPLexity ANalyzer Tool For Javascript
  - [`def-core`](https://npmjs.com/package/def-core) (by tbfed)—def core for deflite
  - [`docula-ui`](https://npmjs.com/package/docula-ui)—Express.js bindings for Docula project
@@ -219,11 +219,12 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`gitline`](https://github.com/cezarlz/gitline#readme) (by Cezar Luiz)—Manage your pull requests and issues from your command line.
  - [`gtni`](https://nmrony.github.io/gtni) (by Nur Rony)—Install your all npm dependencies recursively with gtni while you are doing git clone, fetch or pull
  - [`gub`](https://github.com/janryWang/gub#readme) (by janry)—> 接入成本极低，快速从原有项目(可运行项目)中clone出新项目，并重写package.json，安装依赖
+ - [`just-dev-sdk`](https://github.com/just-group/just-dev-sdk#readme) (by zoujie.wzj)—just development sdk
  - [`kef-core`](https://npmjs.com/package/kef-core) (by younth)—The awesome KEF
  - [`lcov-server`](https://github.com/gabrielcsapo/lcov-server#readme) (by Gabriel J. Csapo)—🎯 A simple lcov server & cli parser
  - [`miguelcostero-ng2-toasty`](https://github.com/akserg/ng2-toasty) (by Sergey Akopkokhyants)—Angular2 Toasty component shows growl-style alerts and messages for your web app
  - [`moto-connector`](https://npmjs.com/package/moto-connector) (by limingv5)—JAN平台SDK
- - [`node-norman`](https://github.com/zenwarr/norman#readme) (by zenwarr)—
+ - [`node-norman`](https://github.com/zenwarr/norman#readme) (by zenwarr)—A tool that helps to develop multi-package Node.js apps.
  - [`nodeschool-admin`](https://github.com/nodeschool/admin#readme) (by Martin Heidegger)—CLI tool for setting up and maintaining a nodeschool chapters and other things.
  - [`ogh`](https://github.com/egoist/ogh#readme) (by EGOIST)—Open GitHub Page of your repo directly in Terminal.
  - [`one-more-gitlab-cli`](https://github.com/chamerling/one-more-gitlab-cli) (by Christophe Hamerling)—One more Gitlab CLI
@@ -236,6 +237,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`snipx`](https://npmjs.com/package/snipx)—Best team snippets
  - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)—Automagically switch on the SSH remote url in a Git repository.
  - [`strapper`](https://npmjs.com/package/strapper) (by Sam Newman)—Coming Soon
+ - [`testarmada-midway`](http://testarmada.io/documentation/Mocking/rWeb/JAVASCRIPT/Introduction) (by Himanshu Jain)—Mocking server to create reliable test data for test execution and development
  - [`vscode-gpm`](https://github.com/axetroy/vscode-gpm#readme)—Git Project Manager
  - [`yarn-upgrade-on-ci`](https://npmjs.com/package/yarn-upgrade-on-ci) (by htwroclau)—undefined
 
