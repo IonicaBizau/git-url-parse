@@ -1,6 +1,6 @@
 {
   "name": "git-url-parse",
-  "version": "10.1.0",
+  "version": "11.0.0",
   "description": "A high level git url parser for common git providers.",
   "main": "lib/index.js",
   "scripts": {
@@ -29,12 +29,9 @@
     "test": "test"
   },
   "dependencies": {
-    "git-up": "^2.0.0"
+    "git-up": "^4.0.0"
   },
   "devDependencies": {
-    "browserify": "^13.0.1",
-    "dist-it": "^2.0.0",
-    "namy": "^1.2.3",
     "tester": "^1.3.1"
   },
   "files": [

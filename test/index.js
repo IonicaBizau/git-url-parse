@@ -5,14 +5,14 @@ const gitUrlParse = require("..")
 
 // Constants
 const URLS = {
-    ssh: "git@github.com:IonicaBizau/git-url-parse"
-  , https: "https://github.com/IonicaBizau/git-url-parse"
-  , ftp: "ftp://github.com/IonicaBizau/git-url-parse"
-  , ftps: "ftps://github.com/IonicaBizau/git-url-parse"
-  , gitSsh: "git+ssh://git@github.com/IonicaBizau/git-url-parse"
-  , ref: "https://github.com/IonicaBizau/git-url-parse/blob/master/test/index.js"
-  , shorthand: "IonicaBizau/git-url-parse"
-  , commit: "https://github.com/IonicaBizau/git-url-parse/commit/9c6443245ace92d237b7b274d4606a616e071c4e"
+    ssh: "git@github.com:42IonicaBizau/git-url-parse"
+  , https: "https://github.com/42IonicaBizau/git-url-parse"
+  , ftp: "ftp://github.com/42IonicaBizau/git-url-parse"
+  , ftps: "ftps://github.com/42IonicaBizau/git-url-parse"
+  , gitSsh: "git+ssh://git@github.com/42IonicaBizau/git-url-parse"
+  , ref: "https://github.com/42IonicaBizau/git-url-parse/blob/master/test/index.js"
+  , shorthand: "42IonicaBizau/git-url-parse"
+  , commit: "https://github.com/42IonicaBizau/git-url-parse/commit/9c6443245ace92d237b7b274d4606a616e071c4e"
 };
 
 tester.describe("parse urls", test => {
@@ -22,9 +22,9 @@ tester.describe("parse urls", test => {
         var res = gitUrlParse(URLS.ssh);
         test.expect(res.protocol).toBe("ssh");
         test.expect(res.source).toBe("github.com");
-        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.owner).toBe("42IonicaBizau");
         test.expect(res.name).toBe("git-url-parse");
-        test.expect(res.full_name).toBe("IonicaBizau/git-url-parse");
+        test.expect(res.full_name).toBe("42IonicaBizau/git-url-parse");
         test.expect(res.href).toBe(URLS.ssh);
         test.expect(res.toString("https")).toBe(URLS.https);
         test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh);
@@ -41,7 +41,7 @@ tester.describe("parse urls", test => {
         var res = gitUrlParse(URLS.ftp);
         test.expect(res.protocol).toBe("ftp");
         test.expect(res.source).toBe("github.com");
-        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.owner).toBe("42IonicaBizau");
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.href).toBe(URLS.ftp);
         test.expect(res.toString("https")).toBe(URLS.https);
@@ -54,7 +54,7 @@ tester.describe("parse urls", test => {
         var res = gitUrlParse(URLS.ftps);
         test.expect(res.protocol).toBe("ftps");
         test.expect(res.source).toBe("github.com");
-        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.owner).toBe("42IonicaBizau");
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.href).toBe(URLS.ftps);
         test.expect(res.toString("https")).toBe(URLS.https);
@@ -67,7 +67,7 @@ tester.describe("parse urls", test => {
         var res = gitUrlParse(URLS.https);
         test.expect(res.protocol).toBe("https");
         test.expect(res.source).toBe("github.com");
-        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.owner).toBe("42IonicaBizau");
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.href).toBe(URLS.https);
         test.expect(res.toString("https")).toBe(URLS.https);
@@ -77,10 +77,10 @@ tester.describe("parse urls", test => {
 
     // HTTPS with ending slash
     test.should("parse https urls with ending slash", () => {
-        var res = gitUrlParse("https://github.com/IonicaBizau/git-url-parse/");
+        var res = gitUrlParse("https://github.com/42IonicaBizau/git-url-parse/");
         test.expect(res.protocol).toBe("https");
         test.expect(res.source).toBe("github.com");
-        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.owner).toBe("42IonicaBizau");
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.toString("https")).toBe(URLS.https);
         test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh);
@@ -92,7 +92,7 @@ tester.describe("parse urls", test => {
         var res = gitUrlParse(URLS.gitSsh);
         test.expect(res.protocol).toBe("ssh");
         test.expect(res.source).toBe("github.com");
-        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.owner).toBe("42IonicaBizau");
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.toString("https")).toBe(URLS.https);
         test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh);
@@ -101,10 +101,10 @@ tester.describe("parse urls", test => {
 
     // HTTPS with basic auth
     test.should("parse https urls with basic auth", () => {
-        var res = gitUrlParse("https://user:password@github.com/IonicaBizau/git-url-parse");
+        var res = gitUrlParse("https://user:password@github.com/42IonicaBizau/git-url-parse");
         test.expect(res.protocol).toBe("https");
         test.expect(res.source).toBe("github.com");
-        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.owner).toBe("42IonicaBizau");
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.user).toBe("user:password");
     });
@@ -193,7 +193,7 @@ tester.describe("parse urls", test => {
         var res = gitUrlParse(URLS.ref);
         test.expect(res.protocol).toBe("https");
         test.expect(res.source).toBe("github.com");
-        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.owner).toBe("42IonicaBizau");
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.href).toBe(URLS.ref);
         test.expect(res.ref).toBe("master");
@@ -214,11 +214,11 @@ tester.describe("parse urls", test => {
     // shorthand urls
     test.should("parse shorthand urls", () => {
         var res = gitUrlParse(URLS.shorthand);
-        test.expect(res.owner).toBe("IonicaBizau");
+        test.expect(res.owner).toBe("42IonicaBizau");
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.href).toBe(URLS.shorthand);
-        test.expect(res.full_name).toBe("IonicaBizau/git-url-parse");
-        test.expect(res.pathname).toBe("IonicaBizau/git-url-parse");
+        test.expect(res.full_name).toBe("42IonicaBizau/git-url-parse");
+        test.expect(res.pathname).toBe("42IonicaBizau/git-url-parse");
     });
 
     test.should("parse subdomains", () => {
