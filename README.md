@@ -187,6 +187,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`committing`](https://github.com/axetroy/committing#readme) (by Axetroy)—commit every days
  - [`common-boilerplate`](https://github.com/node-modules/common-boilerplate#readme) (by TZ)—base class for boilerplate
  - [`complan`](https://github.com/pranavparikh/complan#readme) (by Pranav Parikh)—COMPLexity ANalyzer Tool For Javascript
+ - [`cz-conventional-changelog-befe`](https://github.com/be-fe/cz-conventional-changelog-befe#readme) (by teeeemoji)—cz adaptor for baidu BEFE
  - [`def-core`](https://npmjs.com/package/def-core) (by tbfed)—def core for deflite
  - [`docula-ui`](https://npmjs.com/package/docula-ui)—Express.js bindings for Docula project
  - [`docula-ui-express`](https://npmjs.com/package/docula-ui-express)—Express.js bindings for Docula project
@@ -221,6 +222,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`gub`](https://github.com/janryWang/gub#readme) (by janry)—> 接入成本极低，快速从原有项目(可运行项目)中clone出新项目，并重写package.json，安装依赖
  - [`just-dev-sdk`](https://github.com/just-group/just-dev-sdk#readme) (by zoujie.wzj)—just development sdk
  - [`kef-core`](https://npmjs.com/package/kef-core) (by younth)—The awesome KEF
+ - [`konitor`](https://github.com/konnectors/konitor#readme) (by Simon Constans)—The command-line tool for monitoring konnectors
  - [`lcov-server`](https://github.com/gabrielcsapo/lcov-server#readme) (by Gabriel J. Csapo)—🎯 A simple lcov server & cli parser
  - [`miguelcostero-ng2-toasty`](https://github.com/akserg/ng2-toasty) (by Sergey Akopkokhyants)—Angular2 Toasty component shows growl-style alerts and messages for your web app
  - [`moto-connector`](https://npmjs.com/package/moto-connector) (by limingv5)—JAN平台SDK
@@ -230,7 +232,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`one-more-gitlab-cli`](https://github.com/chamerling/one-more-gitlab-cli) (by Christophe Hamerling)—One more Gitlab CLI
  - [`pr-log`](https://github.com/lo1tuma/pr-log#readme) (by Mathias Schreck)—Changelog generator based on GitHub Pull Requests
  - [`proyecto-sytw-alex-moi`](https://github.com/ULL-ESIT-SYTW-1617/proyecto-sytw-16-17-alex-moi#readme) (by Moises Yanes Carballo)—Module to build a book on GitBook
- - [`semantic-release`](https://github.com/semantic-release/semantic-release#readme) (by Stephan Bönnemann)—Automated semver compliant package publishing
  - [`ship-release`](https://github.com/IonicaBizau/ship-release#readme)—Publish new versions on GitHub and npm with ease.
  - [`sinit`](https://npmjs.com/package/sinit) (by villadora)—Project initializer based on Scaffold
  - [`smart-clone`](https://github.com/ethernetdan/smart-clone#readme)—Clone a directory into a Golang style directory structure
