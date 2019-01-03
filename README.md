@@ -5,7 +5,9 @@
 
 # git-url-parse
 
- [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Travis](https://img.shields.io/travis/IonicaBizau/git-url-parse.svg)](https://travis-ci.org/IonicaBizau/git-url-parse/) [![Version](https://img.shields.io/npm/v/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse) [![Downloads](https://img.shields.io/npm/dt/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse)
+ [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Travis](https://img.shields.io/travis/IonicaBizau/git-url-parse.svg)](https://travis-ci.org/IonicaBizau/git-url-parse/) [![Version](https://img.shields.io/npm/v/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse) [![Downloads](https://img.shields.io/npm/dt/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
+
+<a href="https://www.buymeacoffee.com/H96WwChMy" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee"></a>
 
 > A high level git url parser for common git providers.
 
@@ -162,6 +164,7 @@ this takes time. You can integrate and use these projects in your applications *
 
 However, if you get some profit from this or just want to encourage me to continue creating stuff, there are few ways you can do it:
 
+
  - Starring and sharing the projects you like :rocket:
  - [![Buy me a book][badge_amazon]][amazon]—I love books! I will remember you after years if you buy me one. :grin: :book:
  - [![PayPal][badge_paypal]][paypal-donations]—You can make one-time donations via PayPal. I'll probably buy a ~~coffee~~ tea. :tea:
@@ -170,6 +173,7 @@ However, if you get some profit from this or just want to encourage me to contin
 
     ![](https://i.imgur.com/z6OQI95.png)
 
+
 Thanks! :heart:
 
 
@@ -177,9 +181,11 @@ Thanks! :heart:
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
 
+ - [`auto-changelog-vsts`](https://github.com/denisonluz/auto-changelog-vsts) (by Pete Cook)—Command line tool for generating a changelog from git tags and commit history
  - [`autorelease-setup`](https://github.com/tyler-johnson/autorelease-setup#readme) (by Tyler Johnson)—A CLI tool for setting up a repository with autorelease.
  - [`belt-repo`](https://npmjs.com/package/belt-repo) (by ewnd9)—repo module for belt
  - [`bibi`](https://github.com/steelbrain/bibi#readme) (by steelbrain)—A repository management tool
+ - [`bitbucket-pullr`](https://github.com/julien-langlois/bitbucket-pr#readme) (by Julien Langlois)—CLI for creating Bitbucket pull request
  - [`branch-release`](https://github.com/RomanGotsiy/branch-release#readme) (by Roman Hotsiy)—Build and tag package realease on a separate branch
  - [`changelog.md`](https://github.com/egoist/changelog.md#readme) (by EGOIST)—Manage CHANGELOG.md so easy it hurts.
  - [`ci-yarn-upgrade`](https://github.com/taichi/ci-yarn-upgrade) (by taichi)—Keep NPM dependencies up-to-date with CI, providing version-to-version diff for each library
@@ -187,6 +193,9 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`committing`](https://github.com/axetroy/committing#readme) (by Axetroy)—commit every days
  - [`common-boilerplate`](https://github.com/node-modules/common-boilerplate#readme) (by TZ)—base class for boilerplate
  - [`complan`](https://github.com/pranavparikh/complan#readme) (by Pranav Parikh)—COMPLexity ANalyzer Tool For Javascript
+ - [`create-apex-js-app`](https://github.com/dfrechdev/create-apex-js-app#readme) (by Daniel Frech)—Bootstrap a JavaScript app for Oracle APEX applications
+ - [`create-openapi-repo`](https://github.com/Rebilly/generator-openapi-repo#readme) (by Roman Hotsiy)—Generator of OpenAPI(fka Swagger) repository
+ - [`create-sourcegraph-extension`](https://github.com/sourcegraph/create-extension#readme)—CLI to generate the skeleton for a Sourcegraph extension
  - [`cz-conventional-changelog-befe`](https://github.com/be-fe/cz-conventional-changelog-befe#readme) (by teeeemoji)—cz adaptor for baidu BEFE
  - [`def-core`](https://npmjs.com/package/def-core) (by tbfed)—def core for deflite
  - [`docula-ui`](https://npmjs.com/package/docula-ui)—Express.js bindings for Docula project
@@ -207,6 +216,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`git-lab-cli`](https://npmjs.com/package/git-lab-cli)—gitlab-cli ==================
  - [`git-signed`](https://github.com/Wizcorp/git-signed#readme) (by Marc Trudel)—git commit signing made easy (and enforceable)
  - [`git-source`](https://github.com/IonicaBizau/git-source#readme)—Parse and stringify git urls in a friendly way.
+ - [`git-upstream`](https://github.com/Leko/git-upstream#readme) (by Leko)—Utility to set the remote "upstream" on forked repository
  - [`git-url-promise`](https://github.com/joshuan/git-url#readme) (by Evgeniy Shershnev)—Git url promise
  - [`gitbook-start-https-alex-moi`](https://github.com/ULL-ESIT-SYTW-1617/https-al-servidor-del-libro-alex-moi.git#readme) (by Moises Yanes Carballo)—Plugin deploy iaas https
  - [`gitbook-start-iaas-bbdd-alex-moi`](https://github.com/ULL-ESIT-SYTW-1617/practica-localstrategy-y-base-de-datos-alex-moi.git#readme) (by Moises Yanes Carballo)—Plugin deploy iaas bbdd
@@ -220,18 +230,21 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`gitline`](https://github.com/cezarlz/gitline#readme) (by Cezar Luiz)—Manage your pull requests and issues from your command line.
  - [`gtni`](https://nmrony.github.io/gtni) (by Nur Rony)—Install your all npm dependencies recursively with gtni while you are doing git clone, fetch or pull
  - [`gub`](https://github.com/janryWang/gub#readme) (by janry)—> 接入成本极低，快速从原有项目(可运行项目)中clone出新项目，并重写package.json，安装依赖
+ - [`harry-reporter`](https://github.com/harry-reporter/harry-reporter#readme)—Reporter plugin for hermione
  - [`just-dev-sdk`](https://github.com/just-group/just-dev-sdk#readme) (by zoujie.wzj)—just development sdk
  - [`kef-core`](https://npmjs.com/package/kef-core) (by younth)—The awesome KEF
  - [`konitor`](https://github.com/konnectors/konitor#readme) (by Simon Constans)—The command-line tool for monitoring konnectors
  - [`lcov-server`](https://github.com/gabrielcsapo/lcov-server#readme) (by Gabriel J. Csapo)—🎯 A simple lcov server & cli parser
  - [`miguelcostero-ng2-toasty`](https://github.com/akserg/ng2-toasty) (by Sergey Akopkokhyants)—Angular2 Toasty component shows growl-style alerts and messages for your web app
  - [`moto-connector`](https://npmjs.com/package/moto-connector) (by limingv5)—JAN平台SDK
- - [`node-norman`](https://github.com/zenwarr/norman#readme) (by zenwarr)—A tool that helps to develop multi-package Node.js apps.
+ - [`node-norman`](https://github.com/zenwarr/norman#readme) (by zenwarr)—A tool to develop multi-package Node.js apps with ease.
  - [`nodeschool-admin`](https://github.com/nodeschool/admin#readme) (by Martin Heidegger)—CLI tool for setting up and maintaining a nodeschool chapters and other things.
  - [`ogh`](https://github.com/egoist/ogh#readme) (by EGOIST)—Open GitHub Page of your repo directly in Terminal.
  - [`one-more-gitlab-cli`](https://github.com/chamerling/one-more-gitlab-cli) (by Christophe Hamerling)—One more Gitlab CLI
  - [`pr-log`](https://github.com/lo1tuma/pr-log#readme) (by Mathias Schreck)—Changelog generator based on GitHub Pull Requests
  - [`proyecto-sytw-alex-moi`](https://github.com/ULL-ESIT-SYTW-1617/proyecto-sytw-16-17-alex-moi#readme) (by Moises Yanes Carballo)—Module to build a book on GitBook
+ - [`semantic-release-gitmoji`](https://github.com/momocow/semantic-release-gitmoji#readme) (by MomoCow)—Different from conventional changelog, Gitmoji commits are used to determine a release type and generate release notes.
+ - [`sherry-utils`](https://github.com/sherry/sherry/packages/sherry-utils#readme) (by ULIVZ)—sherry-utils for Sherry
  - [`ship-release`](https://github.com/IonicaBizau/ship-release#readme)—Publish new versions on GitHub and npm with ease.
  - [`sinit`](https://npmjs.com/package/sinit) (by villadora)—Project initializer based on Scaffold
  - [`smart-clone`](https://github.com/ethernetdan/smart-clone#readme)—Clone a directory into a Golang style directory structure
@@ -246,14 +259,15 @@ If you are using this library in one of your projects, add it in this list. :spa
 
 [MIT][license] © [Ionică Bizău][website]
 
-[badge_patreon]: http://ionicabizau.github.io/badges/patreon.svg
-[badge_amazon]: http://ionicabizau.github.io/badges/amazon.svg
-[badge_paypal]: http://ionicabizau.github.io/badges/paypal.svg
-[badge_paypal_donate]: http://ionicabizau.github.io/badges/paypal_donate.svg
+
+[badge_patreon]: https://ionicabizau.github.io/badges/patreon.svg
+[badge_amazon]: https://ionicabizau.github.io/badges/amazon.svg
+[badge_paypal]: https://ionicabizau.github.io/badges/paypal.svg
+[badge_paypal_donate]: https://ionicabizau.github.io/badges/paypal_donate.svg
+
 [patreon]: https://www.patreon.com/ionicabizau
 [amazon]: http://amzn.eu/hRo9sIZ
 [paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVXDDLKKLQRJW
-[donate-now]: http://i.imgur.com/6cMbHOC.png
 
 [license]: http://showalicense.com/?fullname=Ionic%C4%83%20Biz%C4%83u%20%3Cbizauionica%40gmail.com%3E%20(https%3A%2F%2Fionicabizau.net)&year=2015#license-mit
 [website]: https://ionicabizau.net
