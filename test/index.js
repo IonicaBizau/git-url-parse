@@ -241,6 +241,16 @@ tester.describe("parse urls", test => {
         test.expect(res.ref).toBe("master");
         test.expect(res.filepathtype).toBe("blob");
         test.expect(res.filepath).toBe("test/index.js");
+
+        res = gitUrlParse("https://gitlab.com/a/b/c/d/-/blob/master/test/index.js");
+        test.expect(res.protocol).toBe("https");
+        test.expect(res.source).toBe("gitlab.com");
+        test.expect(res.owner).toBe("a/b/c");
+        test.expect(res.name).toBe("d");
+        test.expect(res.href).toBe("https://gitlab.com/a/b/c/d/-/blob/master/test/index.js");
+        test.expect(res.ref).toBe("master");
+        test.expect(res.filepathtype).toBe("blob");
+        test.expect(res.filepath).toBe("test/index.js");
     });
 
     // shorthand urls
