@@ -5,14 +5,18 @@ const gitUrlParse = require("..")
 
 // Constants
 const URLS = {
-    ssh: "git@github.com:42IonicaBizau/git-url-parse"
-  , https: "https://github.com/42IonicaBizau/git-url-parse"
-  , ftp: "ftp://github.com/42IonicaBizau/git-url-parse"
-  , ftps: "ftps://github.com/42IonicaBizau/git-url-parse"
-  , gitSsh: "git+ssh://git@github.com/42IonicaBizau/git-url-parse"
-  , ref: "https://github.com/42IonicaBizau/git-url-parse/blob/master/test/index.js"
-  , shorthand: "42IonicaBizau/git-url-parse"
-  , commit: "https://github.com/42IonicaBizau/git-url-parse/commit/9c6443245ace92d237b7b274d4606a616e071c4e"
+  ssh: "git@github.com:42IonicaBizau/git-url-parse",
+  https: "https://github.com/42IonicaBizau/git-url-parse",
+  ftp: "ftp://github.com/42IonicaBizau/git-url-parse",
+  ftps: "ftps://github.com/42IonicaBizau/git-url-parse",
+  gitSsh: "git+ssh://git@github.com/42IonicaBizau/git-url-parse",
+  ref:
+    "https://github.com/42IonicaBizau/git-url-parse/blob/master/test/index.js",
+  shorthand: "42IonicaBizau/git-url-parse",
+  commit:
+    "https://github.com/42IonicaBizau/git-url-parse/commit/9c6443245ace92d237b7b274d4606a616e071c4e",
+  forwardSlashInBranch:
+    "https://github.com/42IonicaBizau/git-url-parse/blob/dependabot/npm_and_yarn/graphql-15.0.0/package.json",
 };
 
 tester.describe("parse urls", test => {
@@ -350,5 +354,10 @@ tester.describe("parse urls", test => {
         var res = gitUrlParse(URLS.commit);
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.commit).toBe("9c6443245ace92d237b7b274d4606a616e071c4e");
+    });
+
+    test.should("parse branch with dashes", () => {
+        var res = gitUrlParse(URLS.forwardSlashInBranch);
+        test.expect(res.ref).toBe("dependabot/npm_and_yarn/graphql-15.0.0");
     });
 });
