@@ -133,6 +133,26 @@ tester.describe("parse urls", test => {
         test.expect(res.name).toBe("name");
     });
 
+    // bitbucket cloud src file
+    test.should("parse Bitbucket Cloud src file", () => {
+        var res = gitUrlParse("https://bitbucket.org/owner/name/src/master/README.md");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+        test.expect(res.filepath).toBe("README.md");
+        test.expect(res.ref).toBe("master");
+        test.expect(res.filepathtype).toBe("src");
+    });
+
+    // bitbucket cloud raw file
+    test.should("parse Bitbucket Cloud raw file", () => {
+        var res = gitUrlParse("https://bitbucket.org/owner/name/raw/master/README.md");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+        test.expect(res.filepath).toBe("README.md");
+        test.expect(res.ref).toBe("master");
+        test.expect(res.filepathtype).toBe("raw");
+    });
+
     // https bitbucket server
     test.should("parse Bitbucket Server clone over http", () => {
         var res = gitUrlParse("https://user@bitbucket.companyname.com/scm/owner/name.git");
@@ -154,6 +174,17 @@ tester.describe("parse urls", test => {
         test.expect(res.name).toBe("name");
         test.expect(res.filepath).toBe("README.md")
         test.expect(res.ref).toBe("master");
+        test.expect(res.filepathtype).toBe("raw");
+    });
+
+    // bitbucket server raw file
+    test.should("parse Bitbucket Server raw file without ref", () => {
+        var res = gitUrlParse("https://bitbucket.mycompany.com/projects/owner/repos/name/raw/README.md");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+        test.expect(res.filepath).toBe("README.md")
+        test.expect(res.ref).toBe("");
+        test.expect(res.filepathtype).toBe("raw");
     });
 
     test.should("parse Bitbucket server browse file", () => {
@@ -162,6 +193,7 @@ tester.describe("parse urls", test => {
         test.expect(res.name).toBe("name");
         test.expect(res.filepath).toBe("README.md");
         test.expect(res.ref).toBe("master");
+        test.expect(res.filepathtype).toBe("browse");
     });
 
     test.should("parse Bitbucket Server personal repository browse url", () => {
@@ -170,6 +202,7 @@ tester.describe("parse urls", test => {
         test.expect(res.name).toBe("name");
         test.expect(res.filepath).toBe("README.md");
         test.expect(res.ref).toBe("master");
+        test.expect(res.filepathtype).toBe("browse");
     });
 
     test.should("parse Bitbucket Server personal repository raw url", () => {
@@ -178,6 +211,7 @@ tester.describe("parse urls", test => {
         test.expect(res.name).toBe("name");
         test.expect(res.filepath).toBe("README.md");
         test.expect(res.ref).toBe("master");
+        test.expect(res.filepathtype).toBe("raw");
     });
 
     test.should("parse Bitbucket Server personal repository clone over ssh", () => {
