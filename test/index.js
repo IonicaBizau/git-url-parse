@@ -133,6 +133,100 @@ tester.describe("parse urls", test => {
         test.expect(res.name).toBe("name");
     });
 
+    // bitbucket cloud src file
+    test.should("parse Bitbucket Cloud src file", () => {
+        var res = gitUrlParse("https://bitbucket.org/owner/name/src/master/README.md");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+        test.expect(res.filepath).toBe("README.md");
+        test.expect(res.ref).toBe("master");
+        test.expect(res.filepathtype).toBe("src");
+    });
+
+    // bitbucket cloud raw file
+    test.should("parse Bitbucket Cloud raw file", () => {
+        var res = gitUrlParse("https://bitbucket.org/owner/name/raw/master/README.md");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+        test.expect(res.filepath).toBe("README.md");
+        test.expect(res.ref).toBe("master");
+        test.expect(res.filepathtype).toBe("raw");
+    });
+
+    // https bitbucket server
+    test.should("parse Bitbucket Server clone over http", () => {
+        var res = gitUrlParse("https://user@bitbucket.companyname.com/scm/owner/name.git");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+    });
+
+    // ssh bitbucket server
+    test.should("parse Bitbucket Server clone over ssh", () => {
+        var res = gitUrlParse("ssh://git@bitbucket.companyname.com/owner/name.git");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+    });
+
+    // bitbucket server raw file
+    test.should("parse Bitbucket Server raw file", () => {
+        var res = gitUrlParse("https://bitbucket.mycompany.com/projects/owner/repos/name/raw/README.md?at=master");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+        test.expect(res.filepath).toBe("README.md")
+        test.expect(res.ref).toBe("master");
+        test.expect(res.filepathtype).toBe("raw");
+    });
+
+    // bitbucket server raw file
+    test.should("parse Bitbucket Server raw file without ref", () => {
+        var res = gitUrlParse("https://bitbucket.mycompany.com/projects/owner/repos/name/raw/README.md");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+        test.expect(res.filepath).toBe("README.md")
+        test.expect(res.ref).toBe("");
+        test.expect(res.filepathtype).toBe("raw");
+    });
+
+    test.should("parse Bitbucket server browse file", () => {
+        var res = gitUrlParse("https://bitbucket.mycompany.com/projects/owner/repos/name/browse/README.md?at=master");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+        test.expect(res.filepath).toBe("README.md");
+        test.expect(res.ref).toBe("master");
+        test.expect(res.filepathtype).toBe("browse");
+    });
+
+    test.should("parse Bitbucket Server personal repository browse url", () => {
+        var res = gitUrlParse("https://bitbucket.mycompany.com/users/owner/repos/name/browse/README.md?at=master");
+        test.expect(res.owner).toBe("~owner");
+        test.expect(res.name).toBe("name");
+        test.expect(res.filepath).toBe("README.md");
+        test.expect(res.ref).toBe("master");
+        test.expect(res.filepathtype).toBe("browse");
+    });
+
+    test.should("parse Bitbucket Server personal repository raw url", () => {
+        var res = gitUrlParse("https://bitbucket.mycompany.com/users/owner/repos/name/raw/README.md?at=master");
+        test.expect(res.owner).toBe("~owner");
+        test.expect(res.name).toBe("name");
+        test.expect(res.filepath).toBe("README.md");
+        test.expect(res.ref).toBe("master");
+        test.expect(res.filepathtype).toBe("raw");
+    });
+
+    test.should("parse Bitbucket Server personal repository clone over ssh", () => {
+        var res = gitUrlParse("ssh://git@bitbucket.mycompany.com/~owner/name.git");
+        test.expect(res.owner).toBe("~owner");
+        test.expect(res.name).toBe("name");
+    });
+
+    test.should("parse Bitbucket Server personal repository clone over http", () => {
+        var res = gitUrlParse("https://bitbucket.mycompany.com/scm/~owner/name.git");
+        test.expect(res.owner).toBe("~owner");
+        test.expect(res.organization).toBe("~owner")
+        test.expect(res.name).toBe("name");
+    });
+
     // https cloudforge
     test.should("parse CloudForge urls", () => {
         var res = gitUrlParse("https://owner@organization.git.cloudforge.com/name.git");
