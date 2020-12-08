@@ -194,6 +194,7 @@ tester.describe("parse urls", test => {
         test.expect(res.filepath).toBe("README.md");
         test.expect(res.ref).toBe("master");
         test.expect(res.filepathtype).toBe("browse");
+        test.expect(res.toString()).toBe("https://bitbucket.mycompany.com/scm/owner/name")
     });
 
     test.should("parse Bitbucket Server personal repository browse url", () => {
@@ -212,6 +213,7 @@ tester.describe("parse urls", test => {
         test.expect(res.filepath).toBe("README.md");
         test.expect(res.ref).toBe("master");
         test.expect(res.filepathtype).toBe("raw");
+        test.expect(res.toString()).toBe("https://bitbucket.mycompany.com/scm/~owner/name")
     });
 
     test.should("parse Bitbucket Server personal repository clone over ssh", () => {
@@ -225,6 +227,7 @@ tester.describe("parse urls", test => {
         test.expect(res.owner).toBe("~owner");
         test.expect(res.organization).toBe("~owner")
         test.expect(res.name).toBe("name");
+        test.expect(res.full_name).toBe("~owner/name")
     });
 
     // https cloudforge
