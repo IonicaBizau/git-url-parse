@@ -194,6 +194,20 @@ tester.describe("parse urls", test => {
         test.expect(res.filepathtype).toBe("browse");
     });
 
+    test.should("parse Bitbucket server browse repository with a trailing slash", () => {
+        var res = gitUrlParse("https://bitbucket.mycompany.com/projects/owner/repos/name/browse/");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+        test.expect(res.filepathtype).toBe("browse");
+    });
+
+    test.should("not parse correctly unknown Bitbucket server URL", () => {
+        var res = gitUrlParse("https://bitbucket.mycompany.com/projects/owner/repos/name/browseunknown");
+        test.expect(res.owner === "owner").toBe(false);
+        test.expect(res.name === "name").toBe(false);
+        test.expect(res.filepathtype === "browse").toBe(false);
+    });
+
     test.should("parse Bitbucket server browse file", () => {
         var res = gitUrlParse("https://bitbucket.mycompany.com/projects/owner/repos/name/browse/README.md?at=master");
         test.expect(res.owner).toBe("owner");
