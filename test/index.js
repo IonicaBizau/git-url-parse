@@ -187,6 +187,13 @@ tester.describe("parse urls", test => {
         test.expect(res.filepathtype).toBe("raw");
     });
 
+    test.should("parse Bitbucket server browse repository", () => {
+        var res = gitUrlParse("https://bitbucket.mycompany.com/projects/owner/repos/name/browse");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("name");
+        test.expect(res.filepathtype).toBe("browse");
+    });
+
     test.should("parse Bitbucket server browse file", () => {
         var res = gitUrlParse("https://bitbucket.mycompany.com/projects/owner/repos/name/browse/README.md?at=master");
         test.expect(res.owner).toBe("owner");
