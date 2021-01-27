@@ -1,6 +1,6 @@
 {
   "name": "git-url-parse",
-  "version": "11.4.3",
+  "version": "11.4.4",
   "description": "A high level git url parser for common git providers.",
   "main": "lib/index.js",
   "scripts": {
