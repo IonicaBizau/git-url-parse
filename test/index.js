@@ -277,6 +277,25 @@ tester.describe("parse urls", test => {
         test.expect(res.filepath).toBe("test/index.js");
     });
 
+    // https Azure DevOps (formerly Visual Studio Team Services)
+    test.should("parse Azure DevOps HTTPS urls with branch", () => {
+        // Parse URL for matching project and repo names
+        var res = gitUrlParse("https://dev.azure.com/MyOrganization/MatchedName/MyTeam/_git/MatchedName?path=%2Ftest%2Findex.js&version=GBother");
+        test.expect(res.source).toBe("azure.com");
+        test.expect(res.owner).toBe("MatchedName");
+        test.expect(res.name).toBe("MatchedName");
+        test.expect(res.filepath).toBe("test/index.js");
+        test.expect(res.ref).toBe("other");
+
+        // Parse URL for non-matching project and repo names with branch
+        res = gitUrlParse("https://dev.azure.com/MyOrganization/MyProject/_git/MyRepo?path=%2Ftest%2Findex.js&version=GBother");
+        test.expect(res.source).toBe("azure.com");
+        test.expect(res.owner).toBe("MyProject");
+        test.expect(res.name).toBe("MyRepo");
+        test.expect(res.filepath).toBe("test/index.js");
+        test.expect(res.ref).toBe("other");
+    });
+
     // ssh Azure DevOps (formerly Visual Studio Team Services)
     test.should("parse Azure DevOps SSH urls", () => {
         // Parse URL for matching project and repo names
