@@ -201,13 +201,6 @@ tester.describe("parse urls", test => {
         test.expect(res.filepathtype).toBe("browse");
     });
 
-    test.should("not parse correctly unknown Bitbucket server URL", () => {
-        var res = gitUrlParse("https://bitbucket.mycompany.com/projects/owner/repos/name/browseunknown");
-        test.expect(res.owner === "owner").toBe(false);
-        test.expect(res.name === "name").toBe(false);
-        test.expect(res.filepathtype === "browse").toBe(false);
-    });
-
     test.should("parse Bitbucket server browse file", () => {
         var res = gitUrlParse("https://bitbucket.mycompany.com/projects/owner/repos/name/browse/README.md?at=master");
         test.expect(res.owner).toBe("owner");
@@ -249,6 +242,31 @@ tester.describe("parse urls", test => {
         test.expect(res.organization).toBe("~owner")
         test.expect(res.name).toBe("name");
         test.expect(res.full_name).toBe("~owner/name")
+    });
+
+    test.should("parse Bitbucket Server root endpoint", () => {
+      var res = gitUrlParse("https://bitbucket.mycompany.com/projects/owner/repos/name")
+      test.expect(res.owner).toBe("owner");
+      test.expect(res.organization).toBe("owner");
+      test.expect(res.name).toBe("name");
+      test.expect(res.full_name).toBe("owner/name");
+    });
+
+    test.should("parse Bitbucket Server root endpoint with trailing slash", () => {
+      var res = gitUrlParse("https://bitbucket.mycompany.com/projects/owner/repos/name/")
+      test.expect(res.owner).toBe("owner");
+      test.expect(res.organization).toBe("owner");
+      test.expect(res.name).toBe("name");
+      test.expect(res.full_name).toBe("owner/name");
+    });
+
+    test.should("parse Bitbucket Server commit endpoint", () => {
+      var res = gitUrlParse("https://bitbucket.mycompany.com/projects/owner/repos/name/commits/9c6443245ace92d237b7b274d4606a616e071c4e")
+      test.expect(res.owner).toBe("owner");
+      test.expect(res.organization).toBe("owner");
+      test.expect(res.name).toBe("name");
+      test.expect(res.full_name).toBe("owner/name");
+      test.expect(res.commit).toBe("9c6443245ace92d237b7b274d4606a616e071c4e")
     });
 
     // https cloudforge
