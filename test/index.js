@@ -269,6 +269,11 @@ tester.describe("parse urls", test => {
       test.expect(res.commit).toBe("9c6443245ace92d237b7b274d4606a616e071c4e")
     });
 
+    test.should("parse Bitbucket Server with subfolder", () => {
+      var res = gitUrlParse("https://bitbucket.mycompany.com/projects/owner/repos/name/browse/entities/filename.yaml")
+      test.expect(res.filepath).toBe("entities/filename.yaml");
+    });
+
     // https cloudforge
     test.should("parse CloudForge urls", () => {
         var res = gitUrlParse("https://owner@organization.git.cloudforge.com/name.git");
