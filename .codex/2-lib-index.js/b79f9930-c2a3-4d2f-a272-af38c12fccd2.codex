@@ -1,0 +1,132 @@
+{
+  "history": [
+    {
+      "triggeringActions": {
+      },
+      "startLine": 275,
+      "endLine": 299,
+      "file": {
+        "name": "lib/index.js",
+        "blob": "fad0e9c2b8c9cba6f351ceb74144cc7c263b3185",
+        "commit": "f56cbc1f1585b0672092b749512776cbef79d667"
+      },
+      "versionId": "c90eb082-64ea-4c2d-b23e-772b995f6c40"
+    }
+  ],
+  "title": "Stringify existing url",
+  "description": "You can pass in a url along with a type \"https\" or \"ssh\" and this function will then format your URL to the provided type.",
+  "startLine": 275,
+  "endLine": 299,
+  "code": [
+    {
+      "number": "246",
+      "content": "gitUrlParse.stringify = function (obj, type) {"
+    },
+    {
+      "number": "247",
+      "content": "    type = type || ((obj.protocols && obj.protocols.length) ? obj.protocols.join('+') : obj.protocol);"
+    },
+    {
+      "number": "248",
+      "content": "    const port = obj.port ? `:${obj.port}` : '';"
+    },
+    {
+      "number": "249",
+      "content": "    const user = obj.user || 'git';"
+    },
+    {
+      "number": "250",
+      "content": "    const maybeGitSuffix = obj.git_suffix ? \".git\" : \"\""
+    },
+    {
+      "number": "251",
+      "content": "    switch (type) {"
+    },
+    {
+      "number": "252",
+      "content": "        case \"ssh\":"
+    },
+    {
+      "number": "253",
+      "content": "            if (port)"
+    },
+    {
+      "number": "254",
+      "content": "                return `ssh://${user}@${obj.resource}${port}/${obj.full_name}${maybeGitSuffix}`;"
+    },
+    {
+      "number": "255",
+      "content": "            else"
+    },
+    {
+      "number": "256",
+      "content": "                return `${user}@${obj.resource}:${obj.full_name}${maybeGitSuffix}`;"
+    },
+    {
+      "number": "257",
+      "content": "        case \"git+ssh\":"
+    },
+    {
+      "number": "258",
+      "content": "        case \"ssh+git\":"
+    },
+    {
+      "number": "259",
+      "content": "        case \"ftp\":"
+    },
+    {
+      "number": "260",
+      "content": "        case \"ftps\":"
+    },
+    {
+      "number": "261",
+      "content": "            return `${type}://${user}@${obj.resource}${port}/${obj.full_name}${maybeGitSuffix}`;"
+    },
+    {
+      "number": "262",
+      "content": "        case \"http\":"
+    },
+    {
+      "number": "263",
+      "content": "        case \"https\":"
+    },
+    {
+      "number": "264",
+      "content": "            const auth = obj.token"
+    },
+    {
+      "number": "265",
+      "content": "              ? buildToken(obj) : obj.user && (obj.protocols.includes('http') || obj.protocols.includes('https'))"
+    },
+    {
+      "number": "266",
+      "content": "                ? `${obj.user}@` : \"\";"
+    },
+    {
+      "number": "267",
+      "content": "            return `${type}://${auth}${obj.resource}${port}/${buildPath(obj)}${maybeGitSuffix}`;"
+    },
+    {
+      "number": "268",
+      "content": "        default:"
+    },
+    {
+      "number": "269",
+      "content": "            return obj.href;"
+    },
+    {
+      "number": "270",
+      "content": "    }"
+    },
+    {
+      "number": "271",
+      "content": "};"
+    }
+  ],
+  "file": {
+    "name": "lib/index.js",
+    "blob": "fad0e9c2b8c9cba6f351ceb74144cc7c263b3185",
+    "commit": "f56cbc1f1585b0672092b749512776cbef79d667"
+  },
+  "versionId": "b79f9930-c2a3-4d2f-a272-af38c12fccd2"
+}
