@@ -422,7 +422,6 @@ tester.describe("parse urls", test => {
 
     // shorthand urls
     test.should("parse shorthand urls", () => {
-        console.log({ shorthand: URLS.shorthand });
         var res = gitUrlParse(URLS.shorthand);
         test.expect(res.owner).toBe("42IonicaBizau");
         test.expect(res.name).toBe("git-url-parse");
