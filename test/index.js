@@ -6,7 +6,6 @@ const gitUrlParse = require("..")
 // Constants
 const URLS = {
     ssh: "custom-user@github.com:42IonicaBizau/git-url-parse"
-  , enterpriseSsh: "org-12345678@github.com:42IonicaBizau/git-url-parse.git'"
   , https: "https://github.com/42IonicaBizau/git-url-parse"
   , ftp: "ftp://github.com/42IonicaBizau/git-url-parse"
   , ftps: "ftps://github.com/42IonicaBizau/git-url-parse"
