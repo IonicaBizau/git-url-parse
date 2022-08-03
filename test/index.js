@@ -5,15 +5,18 @@ const gitUrlParse = require("..")
 
 // Constants
 const URLS = {
-    ssh: "git@github.com:42IonicaBizau/git-url-parse"
+    ssh: "custom-user@github.com:42IonicaBizau/git-url-parse"
+  , enterpriseSsh: "org-12345678@github.com:42IonicaBizau/git-url-parse.git'"
   , https: "https://github.com/42IonicaBizau/git-url-parse"
   , ftp: "ftp://github.com/42IonicaBizau/git-url-parse"
   , ftps: "ftps://github.com/42IonicaBizau/git-url-parse"
-  , gitSsh: "git+ssh://git@github.com/42IonicaBizau/git-url-parse"
+  , gitSsh: "git+ssh://custom-user@github.com/42IonicaBizau/git-url-parse"
   , ref: "https://github.com/42IonicaBizau/git-url-parse/blob/master/test/index.js"
   , shorthand: "42IonicaBizau/git-url-parse"
   , commit: "https://github.com/42IonicaBizau/git-url-parse/commit/9c6443245ace92d237b7b274d4606a616e071c4e"
 };
+
+const gitUser = (url) => url.replace('custom-user@', 'git@');
 
 tester.describe("parse urls", test => {
 
@@ -45,8 +48,8 @@ tester.describe("parse urls", test => {
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.href).toBe(URLS.ftp);
         test.expect(res.toString("https")).toBe(URLS.https);
-        test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh);
-        test.expect(res.toString("ssh")).toBe(URLS.ssh);
+        test.expect(res.toString("git+ssh")).toBe(gitUser(URLS.gitSsh));
+        test.expect(res.toString("ssh")).toBe(gitUser(URLS.ssh));
     });
 
     // FTPS urls
@@ -58,8 +61,8 @@ tester.describe("parse urls", test => {
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.href).toBe(URLS.ftps);
         test.expect(res.toString("https")).toBe(URLS.https);
-        test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh);
-        test.expect(res.toString("ssh")).toBe(URLS.ssh);
+        test.expect(res.toString("git+ssh")).toBe(gitUser(URLS.gitSsh));
+        test.expect(res.toString("ssh")).toBe(gitUser(URLS.ssh));
     });
 
     // HTTPS urls
@@ -71,8 +74,8 @@ tester.describe("parse urls", test => {
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.href).toBe(URLS.https);
         test.expect(res.toString("https")).toBe(URLS.https);
-        test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh);
-        test.expect(res.toString("ssh")).toBe(URLS.ssh);
+        test.expect(res.toString("git+ssh")).toBe(gitUser(URLS.gitSsh));
+        test.expect(res.toString("ssh")).toBe(gitUser(URLS.ssh));
     });
 
     // HTTPS with ending slash
@@ -83,8 +86,8 @@ tester.describe("parse urls", test => {
         test.expect(res.owner).toBe("42IonicaBizau");
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.toString("https")).toBe(URLS.https);
-        test.expect(res.toString("git+ssh")).toBe(URLS.gitSsh);
-        test.expect(res.toString("ssh")).toBe(URLS.ssh);
+        test.expect(res.toString("git+ssh")).toBe(gitUser(URLS.gitSsh));
+        test.expect(res.toString("ssh")).toBe(gitUser(URLS.ssh));
     });
 
     // git+ssh protocol
@@ -419,6 +422,7 @@ tester.describe("parse urls", test => {
 
     // shorthand urls
     test.should("parse shorthand urls", () => {
+        console.log({ shorthand: URLS.shorthand });
         var res = gitUrlParse(URLS.shorthand);
         test.expect(res.owner).toBe("42IonicaBizau");
         test.expect(res.name).toBe("git-url-parse");
