@@ -410,7 +410,7 @@ tester.describe("parse urls", test => {
         }
 
         // execute for raw, src, blob, and tree
-        ['blob', 'raw', 'blob', 'tree', 'edit'].forEach(testForFilepathtypeURL);
+        ['raw', 'blob', 'tree', 'edit'].forEach(testForFilepathtypeURL);
     });
 
     // shorthand urls
