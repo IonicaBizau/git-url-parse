@@ -424,9 +424,8 @@ tester.describe("parse urls", test => {
         var res = gitUrlParse(URLS.shorthand);
         test.expect(res.owner).toBe("42IonicaBizau");
         test.expect(res.name).toBe("git-url-parse");
-        test.expect(res.href).toBe(URLS.shorthand);
+        test.expect(res.href).toBe(res.toString());
         test.expect(res.full_name).toBe("42IonicaBizau/git-url-parse");
-        test.expect(res.href).toBe("42IonicaBizau/git-url-parse");
     });
 
     test.should("parse subdomains", () => {
