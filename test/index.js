@@ -502,6 +502,10 @@ tester.describe("parse urls", test => {
         var res = gitUrlParse("http://github.com/owner/name.git");
         res.user = "user";
         test.expect(res.toString()).toBe("http://user@github.com/owner/name.git");
+
+        var res = gitUrlParse("https://dev.azure.com/organization/owner%20with%20space/_git/repo%20with%20space")
+        res.user = "pat"
+        test.expect(res.toString()).toBe("https://pat@dev.azure.com/organization/owner%20with%20space/_git/repo%20with%20space")
     });
 
     // commits
