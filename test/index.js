@@ -13,6 +13,7 @@ const URLS = {
   , ref: "https://github.com/42IonicaBizau/git-url-parse/blob/master/test/index.js"
   , shorthand: "42IonicaBizau/git-url-parse"
   , commit: "https://github.com/42IonicaBizau/git-url-parse/commit/9c6443245ace92d237b7b274d4606a616e071c4e"
+  , issue: "https://github.com/IonicaBizau/git-url-parse/issues/133"
 };
 
 const gitUser = (url) => url.replace('custom-user@', 'git@');
@@ -509,5 +510,11 @@ tester.describe("parse urls", test => {
         var res = gitUrlParse(URLS.commit);
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.commit).toBe("9c6443245ace92d237b7b274d4606a616e071c4e");
+    });
+
+    test.should("parse issues urls", () => {
+        var res = gitUrlParse(URLS.issue);
+        test.expect(res.name).toBe("git-url-parse");
+        test.expect(res.organization).toBe("IonicaBizau");
     });
 });
