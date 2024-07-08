@@ -521,4 +521,15 @@ tester.describe("parse urls", test => {
         test.expect(res.name).toBe("git-url-parse");
         test.expect(res.organization).toBe("IonicaBizau");
     });
+
+    // blob in repo path: https://github.com/IonicaBizau/git-url-parse/issues/167
+    test.should("handle 'blob' in repo path", () => {
+        var res = gitUrlParse("https://github.com/owner/id/tree/main/pkg/blob/data.yaml");
+        test.expect(res.source).toBe("github.com");
+        test.expect(res.owner).toBe("owner");
+        test.expect(res.name).toBe("id");
+        test.expect(res.pathname).toBe("/owner/id/tree/main/pkg/blob/data.yaml");
+        test.expect(res.filepath).toBe("pkg/blob/data.yaml");
+        test.expect(res.toString()).toBe("https://github.com/owner/id");
+    });
 });
