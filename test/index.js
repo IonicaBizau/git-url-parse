@@ -532,4 +532,17 @@ tester.describe("parse urls", test => {
         test.expect(res.filepath).toBe("pkg/blob/data.yaml");
         test.expect(res.toString()).toBe("https://github.com/owner/id");
     });
+
+    test.should("parse branch names with slashes, when refs are provided", () => {
+        var res = gitUrlParse("https://github.com/owner/id/blob/branch1/branch2/data.yaml", ["branch1/branch2", "branch1"]);
+        test.expect(res.pathname).toBe("/owner/id/blob/branch1/branch2/data.yaml");
+        test.expect(res.ref).toBe("branch1/branch2");
+        test.expect(res.filepath).toBe("data.yaml");
+        var res = gitUrlParse("https://github.com/owner/id/blob/branch1/branch2/branch3/folder/data.yaml", ["branch1/branch2/branch3", "branch1"]);
+        test.expect(res.ref).toBe("branch1/branch2/branch3");
+        test.expect(res.filepath).toBe("folder/data.yaml");
+        var res = gitUrlParse("https://github.com/owner/id/blob/main/folder/data.yaml", ["branch1/branch2/branch3", "main"]);
+        test.expect(res.ref).toBe("main");
+        test.expect(res.filepath).toBe("folder/data.yaml");
+    });
 });
