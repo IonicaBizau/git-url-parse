@@ -2,12 +2,15 @@
 
 You can see below the API reference of this module.
 
-### `gitUrlParse(url)`
+### `gitUrlParse(url, refs)`
 Parses a Git url.
 
 #### Params
 
 - **String** `url`: The Git url to parse.
+- **Array** `refs`: An array of strings representing the refs. This is  helpful in the context of the URLs that contain branches with slashes.
+ If user wants to identify the branch, he should pass all branch names
+ of the project as part of refs parameter
 
 #### Return
 - **GitUrl** The `GitUrl` object containing:

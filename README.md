@@ -173,12 +173,15 @@ There are few ways to get help:
 ## :memo: Documentation
 
 
-### `gitUrlParse(url)`
+### `gitUrlParse(url, refs)`
 Parses a Git url.
 
 #### Params
 
 - **String** `url`: The Git url to parse.
+- **Array** `refs`: An array of strings representing the refs. This is  helpful in the context of the URLs that contain branches with slashes.
+ If user wants to identify the branch, he should pass all branch names
+ of the project as part of refs parameter
 
 #### Return
 - **GitUrl** The `GitUrl` object containing:
@@ -368,10 +371,11 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@monokle/synchronizer`
  - `@narfeta/catalog-backend`
  - `@navabi/react-native-ssl-pinning`
+ - `@npm_fluentco/adflow-react-native-sdk`
  - `@nuxt/telemetry`
  - `@nuxt/ui-pro`
  - `@nuxthq/studio`
- - `@oiti/rn-liveness2d`
+ - `@oumi/block-sdk`
  - `@oumi/cli-ui`
  - `@pageshare/cli`
  - `@parallelnft/web3modal`
@@ -417,6 +421,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@storybook/storybook-deployer`
  - `@strapi/pack-up`
  - `@strapi/strapi`
+ - `@tahul/ui-fix`
  - `@taingo97/react-native-rsa-expo`
  - `@taingo97/react-native-sunmi-printer`
  - `@taingo97/react-native-telpo-printer`
@@ -509,7 +514,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `github-assistant`
  - `github-publish-npm`
  - `gitlab-ci-variables-cli`
- - `griffin-ui-library`
  - `gtni`
  - `harry-reporter`
  - `hzero-block-sdk`
@@ -583,6 +587,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `react-native-custom-poccomponent`
  - `react-native-dhp-printer`
  - `react-native-fedlight-dsm`
+ - `react-native-flyy`
  - `react-native-ghn-ekyc`
  - `react-native-innity-remaster`
  - `react-native-input-library`
@@ -602,7 +607,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `react-native-multiselector`
  - `react-native-my-first-try-arun-ramya`
  - `react-native-nice-learning`
- - `react-native-package-demo-yash-tech`
  - `react-native-paynow-generator`
  - `react-native-payu-payment-testing`
  - `react-native-progress-arrow`
