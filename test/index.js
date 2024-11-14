@@ -330,6 +330,12 @@ tester.describe("parse urls", test => {
         test.expect(res.source).toBe("dev.azure.com");
         test.expect(res.owner).toBe("ProjectName");
         test.expect(res.name).toBe("RepoName");
+
+        // Parse URL for URL-encoded spaces
+        var res = gitUrlParse("git@ssh.dev.azure.com:v3/CompanyName/Project%20Name/Repo%20Name");
+        test.expect(res.source).toBe("dev.azure.com");
+        test.expect(res.owner).toBe("Project Name");
+        test.expect(res.name).toBe("Repo Name");
     });
 
     // https Visual Studio Team Services (VSTS)
@@ -363,13 +369,12 @@ tester.describe("parse urls", test => {
     });
 
     // ssh Visual Studio Team Services (VSTS)
-    // TODO Check why this does not work anymore.
-    // test.should("parse Visual Studio Team Services (VSTS) SSH urls", () => {
-    //     var res = gitUrlParse("CompanyName@vs-ssh.visualstudio.com:v3/CompanyName/ProjectName/RepoName");
-    //     test.expect(res.source).toBe("visualstudio.com");
-    //     test.expect(res.owner).toBe("ProjectName");
-    //     test.expect(res.name).toBe("RepoName");
-    // });
+    test.should("parse Visual Studio Team Services (VSTS) SSH urls", () => {
+        var res = gitUrlParse("CompanyName@vs-ssh.visualstudio.com:v3/CompanyName/ProjectName/RepoName");
+        test.expect(res.source).toBe("visualstudio.com");
+        test.expect(res.owner).toBe("ProjectName");
+        test.expect(res.name).toBe("RepoName");
+    });
 
     // custom git hosted URL with 2 parts SLD
     test.should("parse Gih hosted urls with two parts SLD", () => {
