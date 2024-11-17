@@ -273,6 +273,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@0x-lerna-fork/github-client`
  - `@1coin178/github-compare`
  - `@_nomtek/react-native-shimmer-animation`
+ - `@adityasinghal26/backstage-plugin-daytona`
  - `@akemona-org/strapi-generate-new`
  - `@amiruldev/wajs`
  - `@anakz/backstage-plugin-library-check-backend`
@@ -280,6 +281,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@appirio/appirio`
  - `@appworks/project-utils`
  - `@arcanis/sherlock`
+ - `@ashcorrguardian/cdk`
  - `@atomist/automation-client`
  - `@atomist/automation-client-ext-raven`
  - `@atomist/cli`
@@ -303,7 +305,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@backstage/plugin-techdocs-node`
  - `@belt/repo`
  - `@blackglory/git-list`
- - `@blakvghost/ui-pro`
  - `@brainfried/github-books`
  - `@brantalikp/rn-resize`
  - `@brisk-docs/gatsby-generator`
@@ -312,10 +313,13 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@cilyn/bitbucket`
  - `@ckatzorke/renovate`
  - `@cliz/gpm`
+ - `@codemod.com/workflow`
  - `@corelmax/react-native-my2c2p-sdk`
  - `@cs6/react-native-test-native-view-library`
  - `@csmith/release-it`
+ - `@ctdesarrollo/pack-up`
  - `@dandean/storybook-deployer`
+ - `@daytona-io/backstage-plugin-daytona`
  - `@deskbtm/workspace-tools`
  - `@dfatwork-pkgs/backstage-cli`
  - `@dougkulak/semantic-release-gh-pages-plugin`
@@ -327,6 +331,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@erquhart/lerna-github-client`
  - `@esops/publish-github-pages`
  - `@eteg/nextra-theme-docs`
+ - `@evanpurkhiser/tooling-personal`
  - `@facadecompany/ignition-ui`
  - `@feizheng/next-git-url`
  - `@felipesimmi/react-native-datalogic-module`
@@ -353,8 +358,11 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@jswork/topics2keywords`
  - `@kadira/storybook-deployer`
  - `@kevinbds/techdocs-common`
+ - `@kgit/readability`
+ - `@kgit/readbility`
  - `@koumoul/gh-pages-multi`
- - `@larose/git-backup`
+ - `@labiebhn_/react-native-multiplier`
+ - `@lacymorrow/nextra-theme-docs`
  - `@lehuyaa/my-assets`
  - `@lerna-lite/version`
  - `@lerna-test-v1/markdown`
@@ -371,10 +379,10 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@monokle/synchronizer`
  - `@narfeta/catalog-backend`
  - `@navabi/react-native-ssl-pinning`
- - `@npm_fluentco/adflow-react-native-sdk`
  - `@nuxt/telemetry`
  - `@nuxt/ui-pro`
  - `@nuxthq/studio`
+ - `@oiti/rn-liveness2d`
  - `@oumi/block-sdk`
  - `@oumi/cli-ui`
  - `@pageshare/cli`
@@ -394,6 +402,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@rdfrontier/plugin-mobile`
  - `@react-18-pdf/root`
  - `@rianfowler/backstage-backend-common`
+ - `@rnx-kit/build`
  - `@roadiehq/backstage-plugin-github-insights`
  - `@rocali/apollo`
  - `@s-ui/mono`
@@ -409,22 +418,24 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@servable/manifest`
  - `@servable/tools`
  - `@shopgate/pwa-releaser`
- - `@sidghimire/react-native-mapbox-navigation`
  - `@speakeasy-sdks/nextra-theme-docs`
  - `@spotify/backstage-plugin-soundcheck-backend-module-gitlab`
  - `@spryker-lerna/github-client`
+ - `@sridharetikala/react-native-rn-lib-custom-components`
  - `@ssaitho/nextra-theme-docs`
+ - `@sse-ui/nuxt`
  - `@stackbit/cms-git`
  - `@stackbit/dev-common`
  - `@status-im/react-native-transparent-video`
  - `@stepsec/release`
  - `@storybook/storybook-deployer`
  - `@strapi/pack-up`
+ - `@strapi/sdk-plugin`
  - `@strapi/strapi`
  - `@tahul/ui-fix`
- - `@taingo97/react-native-rsa-expo`
  - `@taingo97/react-native-sunmi-printer`
  - `@taingo97/react-native-telpo-printer`
+ - `@takagiy/create-ts-starter`
  - `@tasenor/common-node`
  - `@theowenyoung/gatsby-source-git`
  - `@tmplr/node`
@@ -463,7 +474,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `codesandbox-theme-docs`
  - `common-boilerplate`
  - `complan`
- - `configorama`
  - `copy-github-directory`
  - `cover-builder`
  - `create-apex-js-app`
@@ -477,7 +487,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `docula-ui-express`
  - `documentation`
  - `documentation-custom-markdown`
- - `dsm-vercel-submodules`
  - `dx-scanner`
  - `ewizard-cli`
  - `fluent.adflow.reactnativesdk-alpha`
@@ -511,7 +520,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `gitbook-start-plugin-iaas-ull-es-noejaco2017`
  - `gitc`
  - `github-action-readme`
- - `github-assistant`
  - `github-publish-npm`
  - `gitlab-ci-variables-cli`
  - `gtni`
@@ -536,12 +544,8 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `miguelcostero-ng2-toasty`
  - `native-apple-login`
  - `native-kakao-login`
- - `nextra-theme-docs`
  - `nextra-theme-docs-mdxcomponents`
- - `nextra-theme-infp`
  - `ng-apollo`
- - `nmrium-cli`
- - `notch-ui-ultra`
  - `npm_one_1_2_3`
  - `npm_qwerty`
  - `octokit-downloader`
@@ -554,7 +558,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `pbc`
  - `pileuleuyantea`
  - `pr-changelog-gen`
- - `pr-log`
  - `pree`
  - `prep-barv11`
  - `project-wajs-dv`
@@ -571,6 +574,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `react-native-animate-text`
  - `react-native-arunjeyam1987`
  - `react-native-arunmeena1987`
+ - `react-native-awesome-module-dharmesh`
  - `react-native-awesome-module-two`
  - `react-native-azure-communication-services`
  - `react-native-basic-app`
@@ -585,6 +589,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `react-native-cplus`
  - `react-native-create-video-thumbnail`
  - `react-native-custom-poccomponent`
+ - `react-native-datacapture-core`
  - `react-native-dhp-printer`
  - `react-native-fedlight-dsm`
  - `react-native-flyy`
@@ -599,11 +604,9 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `react-native-login-demo-test`
  - `react-native-manh-test`
  - `react-native-module-for-testing`
- - `react-native-multi-bluetooth-printer`
  - `react-native-multiplier-component`
  - `react-native-multiplier-demo`
  - `react-native-multiplier2`
- - `react-native-multiply`
  - `react-native-multiselector`
  - `react-native-my-first-try-arun-ramya`
  - `react-native-nice-learning`
@@ -613,13 +616,12 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `react-native-rabbitmq-all`
  - `react-native-reanimated-sortable-list`
  - `react-native-rom-components`
+ - `react-native-s-airlines`
  - `react-native-sandycomponent`
  - `react-native-savczuk-feature-library`
  - `react-native-shared-gesture`
  - `react-native-test-comlibrary`
  - `react-native-ticker-tape`
- - `react-native-tone-framework`
- - `react-native-tones`
  - `react-native-uvc-camera-android`
  - `react-native-withframework-check`
  - `react-native-ytximkit`
@@ -643,7 +645,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `simple-github-release`
  - `snipx`
  - `spk`
- - `storybook-deployer`
  - `strapi-generate-new`
  - `stylelint-formatter-utils`
  - `sync-repos`
