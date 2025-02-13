@@ -1,6 +1,6 @@
 {
   "name": "git-url-parse",
-  "version": "16.0.0",
+  "version": "16.0.1",
   "description": "A high level git url parser for common git providers.",
   "main": "lib/index.js",
   "scripts": {
@@ -45,6 +45,8 @@
     "menu/",
     "cli.js",
     "index.js",
+    "index.d.ts",
+    "package-lock.json",
     "bloggify.js",
     "bloggify.json",
     "bloggify/"

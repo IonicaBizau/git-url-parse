@@ -21,7 +21,7 @@
 
 # git-url-parse
 
- [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Travis](https://img.shields.io/travis/IonicaBizau/git-url-parse.svg)](https://travis-ci.org/IonicaBizau/git-url-parse/) [![Version](https://img.shields.io/npm/v/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse) [![Downloads](https://img.shields.io/npm/dt/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
+ [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Travis](https://img.shields.io/travis/IonicaBizau/git-url-parse.svg)](https://travis-ci.org/IonicaBizau/git-url-parse/) [![Version](https://img.shields.io/npm/v/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse) [![Downloads](https://img.shields.io/npm/dt/git-url-parse.svg)](https://www.npmjs.com/package/git-url-parse) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/@johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 <a href="https://www.buymeacoffee.com/H96WwChMy" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee"></a>
 
@@ -305,8 +305,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@backstage/plugin-techdocs-node`
  - `@belt/repo`
  - `@blackglory/git-list`
- - `@brainfried/github-books`
- - `@brantalikp/rn-resize`
  - `@brisk-docs/gatsby-generator`
  - `@brisk-docs/website`
  - `@buschtoens/documentation`
@@ -323,15 +321,16 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@deskbtm/workspace-tools`
  - `@dfatwork-pkgs/backstage-cli`
  - `@dougkulak/semantic-release-gh-pages-plugin`
+ - `@drakedeatonuk/rschedule`
  - `@dtwo/telemetry`
  - `@eat-fish/changelog`
  - `@emedvedev/renovate`
  - `@enkeledi/react-native-week-month-date-picker`
+ - `@env0/backstage-plugin-env0`
  - `@era-ci/utils`
  - `@erquhart/lerna-github-client`
  - `@esops/publish-github-pages`
  - `@eteg/nextra-theme-docs`
- - `@evanpurkhiser/tooling-personal`
  - `@facadecompany/ignition-ui`
  - `@feizheng/next-git-url`
  - `@felipesimmi/react-native-datalogic-module`
@@ -348,6 +347,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@hawkingnetwork/react-native-tab-view`
  - `@hbglobal/react-native-actions-shortcuts`
  - `@hemith/react-native-tnk`
+ - `@holipoly/cli`
  - `@hugomrdias/documentation`
  - `@hygiene/plugin-github-url`
  - `@iceworks/project-utils`
@@ -358,11 +358,9 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@jswork/topics2keywords`
  - `@kadira/storybook-deployer`
  - `@kevinbds/techdocs-common`
- - `@kgit/readability`
  - `@kgit/readbility`
  - `@koumoul/gh-pages-multi`
  - `@labiebhn_/react-native-multiplier`
- - `@lacymorrow/nextra-theme-docs`
  - `@lehuyaa/my-assets`
  - `@lerna-lite/version`
  - `@lerna-test-v1/markdown`
@@ -379,10 +377,10 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@monokle/synchronizer`
  - `@narfeta/catalog-backend`
  - `@navabi/react-native-ssl-pinning`
+ - `@nuxt/content`
  - `@nuxt/telemetry`
  - `@nuxt/ui-pro`
  - `@nuxthq/studio`
- - `@oiti/rn-liveness2d`
  - `@oumi/block-sdk`
  - `@oumi/cli-ui`
  - `@pageshare/cli`
@@ -390,6 +388,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@pipelinedoc/cli`
  - `@plone/scripts`
  - `@pmworks/project-utils`
+ - `@polearn/core`
  - `@positionex/position-sdk`
  - `@praella/localisationist`
  - `@pubbo/github-client`
@@ -404,6 +403,8 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@rianfowler/backstage-backend-common`
  - `@rnx-kit/build`
  - `@roadiehq/backstage-plugin-github-insights`
+ - `@roadiehq/backstage-plugin-github-pull-requests`
+ - `@roadiehq/backstage-plugin-security-insights`
  - `@rocali/apollo`
  - `@s-ui/mono`
  - `@s-ui/ssr`
@@ -418,12 +419,11 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@servable/manifest`
  - `@servable/tools`
  - `@shopgate/pwa-releaser`
+ - `@sobird/actions`
  - `@speakeasy-sdks/nextra-theme-docs`
  - `@spotify/backstage-plugin-soundcheck-backend-module-gitlab`
  - `@spryker-lerna/github-client`
- - `@sridharetikala/react-native-rn-lib-custom-components`
  - `@ssaitho/nextra-theme-docs`
- - `@sse-ui/nuxt`
  - `@stackbit/cms-git`
  - `@stackbit/dev-common`
  - `@status-im/react-native-transparent-video`
@@ -435,8 +435,8 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@tahul/ui-fix`
  - `@taingo97/react-native-sunmi-printer`
  - `@taingo97/react-native-telpo-printer`
- - `@takagiy/create-ts-starter`
  - `@tasenor/common-node`
+ - `@terasky/backstage-plugin-crossplane-claim-updater`
  - `@theowenyoung/gatsby-source-git`
  - `@tmplr/node`
  - `@toanz/strapi-generate-new`
@@ -462,7 +462,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `anakwadontea`
  - `apify-shared`
  - `apollo`
- - `archlibrary`
  - `auto-changelog-vsts`
  - `autorelease-setup`
  - `belt-repo`
@@ -473,11 +472,10 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `clipped`
  - `codesandbox-theme-docs`
  - `common-boilerplate`
- - `complan`
  - `copy-github-directory`
  - `cover-builder`
  - `create-apex-js-app`
- - `create-minimal-monorepo`
+ - `create-release-it`
  - `cz-conventional-changelog-befe`
  - `datoit-generate-new`
  - `debone`
@@ -537,10 +535,12 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `lambda-service`
  - `lcov-server`
  - `lerna`
+ - `license-analysis`
  - `lime-cli`
  - `manage-dependency`
  - `mangudinlagirajin`
  - `mdnext-loader`
+ - `mf-cta-testing`
  - `miguelcostero-ng2-toasty`
  - `native-apple-login`
  - `native-kakao-login`
@@ -558,7 +558,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `pbc`
  - `pileuleuyantea`
  - `pr-changelog-gen`
- - `pree`
  - `prep-barv11`
  - `project-wajs-dv`
  - `publish-version`
@@ -574,7 +573,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `react-native-animate-text`
  - `react-native-arunjeyam1987`
  - `react-native-arunmeena1987`
- - `react-native-awesome-module-dharmesh`
  - `react-native-awesome-module-two`
  - `react-native-azure-communication-services`
  - `react-native-basic-app`
@@ -592,7 +590,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `react-native-datacapture-core`
  - `react-native-dhp-printer`
  - `react-native-fedlight-dsm`
- - `react-native-flyy`
  - `react-native-ghn-ekyc`
  - `react-native-innity-remaster`
  - `react-native-input-library`
@@ -622,6 +619,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `react-native-shared-gesture`
  - `react-native-test-comlibrary`
  - `react-native-ticker-tape`
+ - `react-native-tone-test`
  - `react-native-uvc-camera-android`
  - `react-native-withframework-check`
  - `react-native-ytximkit`
@@ -633,6 +631,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `renovate`
  - `renovate-csm`
  - `repom`
+ - `repomix`
  - `rn-adyen-dropin`
  - `rn-check-btn`
  - `rn_unique_device_id`
@@ -665,6 +664,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `winx-form-winx`
  - `workspace-tools`
  - `wsj.gatsby-source-git`
+ - `zephyr-agent`
 
 
 
