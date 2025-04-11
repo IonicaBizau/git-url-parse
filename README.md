@@ -82,7 +82,7 @@ const GitUrlParse = require("git-url-parse");
 console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git"));
 // => {
 //     protocols: []
-//   , port: null
+//   , port: ""
 //   , resource: "github.com"
 //   , user: "git"
 //   , pathname: "/IonicaBizau/node-git-url-parse.git"
@@ -100,7 +100,7 @@ console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git"));
 console.log(GitUrlParse("https://github.com/IonicaBizau/node-git-url-parse.git"));
 // => {
 //     protocols: ["https"]
-//   , port: null
+//   , port: ""
 //   , resource: "github.com"
 //   , user: ""
 //   , pathname: "/IonicaBizau/node-git-url-parse.git"
@@ -118,7 +118,7 @@ console.log(GitUrlParse("https://github.com/IonicaBizau/node-git-url-parse.git")
 console.log(GitUrlParse("https://github.com/IonicaBizau/git-url-parse/blob/master/test/index.js"));
 // { protocols: [ 'https' ],
 //   protocol: 'https',
-//   port: null,
+//   port: "",
 //   resource: 'github.com',
 //   user: '',
 //   pathname: '/IonicaBizau/git-url-parse/blob/master/test/index.js',
