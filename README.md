@@ -82,7 +82,7 @@ const GitUrlParse = require("git-url-parse");
 console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git"));
 // => {
 //     protocols: []
-//   , port: ""
+//   , port: null
 //   , resource: "github.com"
 //   , user: "git"
 //   , pathname: "/IonicaBizau/node-git-url-parse.git"
@@ -100,7 +100,7 @@ console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git"));
 console.log(GitUrlParse("https://github.com/IonicaBizau/node-git-url-parse.git"));
 // => {
 //     protocols: ["https"]
-//   , port: ""
+//   , port: null
 //   , resource: "github.com"
 //   , user: ""
 //   , pathname: "/IonicaBizau/node-git-url-parse.git"
@@ -118,7 +118,7 @@ console.log(GitUrlParse("https://github.com/IonicaBizau/node-git-url-parse.git")
 console.log(GitUrlParse("https://github.com/IonicaBizau/git-url-parse/blob/master/test/index.js"));
 // { protocols: [ 'https' ],
 //   protocol: 'https',
-//   port: "",
+//   port: null,
 //   resource: 'github.com',
 //   user: '',
 //   pathname: '/IonicaBizau/git-url-parse/blob/master/test/index.js',
@@ -153,23 +153,6 @@ console.log(GitUrlParse("git@github.com:IonicaBizau/node-git-url-parse.git").toS
 
 
 
-
-## :question: Get Help
-
-There are few ways to get help:
-
-
-
- 1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
- 2. For bug reports and feature requests, open issues. :bug:
- 3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
-
-
-
-
-
-
-
 ## :memo: Documentation
 
 
@@ -186,7 +169,7 @@ Parses a Git url.
 #### Return
 - **GitUrl** The `GitUrl` object containing:
  - `protocols` (Array): An array with the url protocols (usually it has one element).
- - `port` (null|Number): The domain port.
+ - `port` (String): The domain port.
  - `resource` (String): The url domain (including subdomains).
  - `user` (String): The authentication user (usually for ssh urls).
  - `pathname` (String): The url pathname.
@@ -216,6 +199,24 @@ Stringifies a `GitUrl` object.
 
 #### Return
 - **String** The stringified url.
+
+
+
+
+
+
+
+
+
+## :question: Get Help
+
+There are few ways to get help:
+
+
+
+ 1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
+ 2. For bug reports and feature requests, open issues. :bug:
+ 3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
 
 
 
@@ -274,6 +275,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@1coin178/github-compare`
  - `@_nomtek/react-native-shimmer-animation`
  - `@adityasinghal26/backstage-plugin-daytona`
+ - `@ahmed_shaban123/react-native-currencyinput`
  - `@akemona-org/strapi-generate-new`
  - `@amiruldev/wajs`
  - `@anakz/backstage-plugin-library-check-backend`
@@ -321,7 +323,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@deskbtm/workspace-tools`
  - `@dfatwork-pkgs/backstage-cli`
  - `@dougkulak/semantic-release-gh-pages-plugin`
- - `@drakedeatonuk/rschedule`
  - `@dtwo/telemetry`
  - `@eat-fish/changelog`
  - `@emedvedev/renovate`
@@ -337,6 +338,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@flxbl-io/sfp`
  - `@focusworkstemp/project-utils`
  - `@form8ion/lift`
+ - `@gambitnash/cli-plugin-scaffold`
  - `@gasket/plugin-metrics`
  - `@geut/chan-parser`
  - `@geut/git-compare-template`
@@ -432,6 +434,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@strapi/pack-up`
  - `@strapi/sdk-plugin`
  - `@strapi/strapi`
+ - `@syedt/hellosdk`
  - `@tahul/ui-fix`
  - `@taingo97/react-native-sunmi-printer`
  - `@taingo97/react-native-telpo-printer`
@@ -468,7 +471,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `biometric-st`
  - `bitbucket-pullr`
  - `changelog.md`
- - `checkbox-component`
  - `clipped`
  - `codesandbox-theme-docs`
  - `common-boilerplate`
@@ -479,12 +481,12 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `cz-conventional-changelog-befe`
  - `datoit-generate-new`
  - `debone`
- - `def-core`
  - `development-efficiency`
  - `docula-ui`
  - `docula-ui-express`
  - `documentation`
  - `documentation-custom-markdown`
+ - `domaincomponent`
  - `dx-scanner`
  - `ewizard-cli`
  - `fluent.adflow.reactnativesdk-alpha`
@@ -497,8 +499,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `gatsby-source-git`
  - `gatsby-source-git-remotes`
  - `gatsby-source-npmjs`
- - `gatsby-theme-cone`
- - `gatsby-theme-nestx`
  - `gatsby-theme-zh`
  - `gaurav-react-native-loop`
  - `gcpayz-block-sdk`
@@ -507,7 +507,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `gerimismalamsenin`
  - `ghseek`
  - `git-issues`
- - `git-observer`
  - `git-origin-check`
  - `git-service-node`
  - `git-source`
@@ -535,6 +534,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `lambda-service`
  - `lcov-server`
  - `lerna`
+ - `library-nuxt-ui`
  - `license-analysis`
  - `lime-cli`
  - `manage-dependency`
@@ -549,6 +549,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `npm_one_1_2_3`
  - `npm_qwerty`
  - `octokit-downloader`
+ - `octopulse`
  - `omg`
  - `open-pull-request`
  - `package-health-checker`
@@ -591,6 +592,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `react-native-dhp-printer`
  - `react-native-fedlight-dsm`
  - `react-native-ghn-ekyc`
+ - `react-native-ideo-rn-notifications`
  - `react-native-innity-remaster`
  - `react-native-input-library`
  - `react-native-is7`
@@ -619,7 +621,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `react-native-shared-gesture`
  - `react-native-test-comlibrary`
  - `react-native-ticker-tape`
- - `react-native-tone-test`
  - `react-native-uvc-camera-android`
  - `react-native-withframework-check`
  - `react-native-ytximkit`
