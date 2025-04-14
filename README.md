@@ -404,7 +404,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@react-18-pdf/root`
  - `@rianfowler/backstage-backend-common`
  - `@rnx-kit/build`
- - `@roadiehq/backstage-plugin-github-insights`
  - `@roadiehq/backstage-plugin-github-pull-requests`
  - `@roadiehq/backstage-plugin-security-insights`
  - `@rocali/apollo`
@@ -434,7 +433,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@strapi/pack-up`
  - `@strapi/sdk-plugin`
  - `@strapi/strapi`
- - `@syedt/hellosdk`
  - `@tahul/ui-fix`
  - `@taingo97/react-native-sunmi-printer`
  - `@taingo97/react-native-telpo-printer`
@@ -492,7 +490,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `fluent.adflow.reactnativesdk-alpha`
  - `flutter-boot`
  - `fmsl`
- - `fotingo`
  - `framework_test_library_sixdee`
  - `fster`
  - `ftl-renovate`
